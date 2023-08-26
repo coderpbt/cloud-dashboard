@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/src/styles/main.css" />
+        <title>Cloud Dashboard</title>
+    </head>
+    <body>
+        <div class="main-wapper">
+            <!-- ======= Header ======= -->
+            <header id="header" class="header">
+                <div class="header-main-grid">
+                    <!-- logo -->
+                    <div class="logo">
+                        <a href="/"><span>M</span><img src="/src/images/logo.png" alt="logo" /></a>
+                        <div class="toggle-bar-icon">
+                            <img class="bar" src="/src/images/menu.png" alt="menu">
+                        </div>
+                    </div>
+                    <!-- logo -->
+                    <!-- srarch filter -->
+                    <div class="search-filter-main-flex">
+                        <div class="search-bar">
+                            <form>
+                                <input type="text" placeholder="Search Files..." />
+                                <button type="submit" class="search-icon"><img src="/src/images/search.png" alt="search" /></button>
+                            </form>
+                        </div>
+                        <div class="filter-search">
+                            <select>
+                                <option>Filter</option>
+                                <option>Filter 2</option>
+                                <option>Filter 3</option>
+                            </select>
+                            <img src="/src/images/arrow-down.png" alt="arrow-down" />
+                        </div>
+                    </div>
+                    <!-- srarch filter -->
+                    <!-- user profile -->
+                    <div class="user-profile-flex">
+                        <div class="search has-dropdown">
+                            <a href="#"><img src="/src/images/search.png" alt="search" /></a>
+                            <ul class="child-dropdown">
+                                <li class="search-form-mobile">
+                                    <form>
+                                        <input type="text" placeholder="Search Files..." />
+                                        <button type="submit" class="search-icon"><img src="/src/images/search.png" alt="search" /></button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="notifaction has-dropdown">
+                            <a href="#"><img src="/src/images/bell.png" alt="bell" /></a>
+                            <ul class="child-dropdown">
+                                <li><a href="#">Quae dolorem earum veritatis oditseno 30 min. ago</a></li>
+                                <li><a href="#">Quae dolorem earum veritatis oditseno 30 min. ago</a></li>
+                                <li><a href="#">Quae dolorem earum veritatis oditseno 30 min. ago</a></li>
+                                <li><a href="#">Quae dolorem earum veritatis oditseno 30 min. ago</a></li>
+                            </ul>
+                        </div>
+                        <div class="profile">
+                            <div class="user-profile has-dropdown">
+                                <a href="#">
+                                    <div class="profile-img">
+                                        <img src="/src/images/profile.png" alt="profile" />
+                                    </div>
+                                    <div class="profile-text">
+                                        <h3>hrk</h3>
+                                        <p>hrk041999@gmail.com</p>
+                                    </div>
+                                </a>
+                                <div class="profile-dropdown">
+                                    <ul class="child-dropdown">
+                                        <li><a href="#">My Profile</a></li>
+                                        <li><a href="#">Add Fund</a></li>
+                                        <li><a href="#">API Documentation</a></li>
+                                        <li><a href="#">Log Out</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- user profile -->
+                </div>
+            </header>
+            <!-- End Header -->
+
+            <!-- ======= Sidebar ======= -->
+            <aside id="sidebar" class="sidebar">
+                <nav class="sidebar-nav">
+                    <!-- <div class="crose-bar-top">
+                    <i class="far fa-times-circle crosse-bar"></i>
+                </div> -->
+                    <ul class="nav-menu">
+                        <li class="active">
+                            <a href="#">
+                                <div class="nav-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <rect x="4" y="4" width="7" height="7" rx="1.5" fill="#DEE1E6" />
+                                        <path
+                                            opacity="0.3"
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M13 5.5C13 4.67157 13.6716 4 14.5 4H18.5C19.3284 4 20 4.67157 20 5.5V9.5C20 10.3284 19.3284 11 18.5 11H14.5C13.6716 11 13 10.3284 13 9.5V5.5ZM4 14.5C4 13.6716 4.67157 13 5.5 13H9.5C10.3284 13 11 13.6716 11 14.5V18.5C11 19.3284 10.3284 20 9.5 20H5.5C4.67157 20 4 19.3284 4 18.5V14.5ZM14.5 13C13.6716 13 13 13.6716 13 14.5V18.5C13 19.3284 13.6716 20 14.5 20H18.5C19.3284 20 20 19.3284 20 18.5V14.5C20 13.6716 19.3284 13 18.5 13H14.5Z"
+                                            fill="#DEE1E6"
+                                        />
+                                    </svg>
+                                </div>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="nav-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <rect opacity="0.3" x="4" y="4" width="4" height="4" rx="1" fill="#51459E" />
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M11 4C10.4477 4 10 4.44772 10 5V7C10 7.55228 10.4477 8 11 8H13C13.5523 8 14 7.55228 14 7V5C14 4.44772 13.5523 4 13 4H11ZM5 10C4.44772 10 4 10.4477 4 11V13C4 13.5523 4.44772 14 5 14H7C7.55228 14 8 13.5523 8 13V11C8 10.4477 7.55228 10 7 10H5ZM10 11C10 10.4477 10.4477 10 11 10H13C13.5523 10 14 10.4477 14 11V13C14 13.5523 13.5523 14 13 14H11C10.4477 14 10 13.5523 10 13V11ZM17 4C16.4477 4 16 4.44772 16 5V7C16 7.55228 16.4477 8 17 8H19C19.5523 8 20 7.55228 20 7V5C20 4.44772 19.5523 4 19 4H17ZM16 11C16 10.4477 16.4477 10 17 10H19C19.5523 10 20 10.4477 20 11V13C20 13.5523 19.5523 14 19 14H17C16.4477 14 16 13.5523 16 13V11ZM5 16C4.44772 16 4 16.4477 4 17V19C4 19.5523 4.44772 20 5 20H7C7.55228 20 8 19.5523 8 19V17C8 16.4477 7.55228 16 7 16H5ZM10 17C10 16.4477 10.4477 16 11 16H13C13.5523 16 14 16.4477 14 17V19C14 19.5523 13.5523 20 13 20H11C10.4477 20 10 19.5523 10 19V17ZM17 16C16.4477 16 16 16.4477 16 17V19C16 19.5523 16.4477 20 17 20H19C19.5523 20 20 19.5523 20 19V17C20 16.4477 19.5523 16 19 16H17Z"
+                                            fill="#51459E"
+                                        />
+                                    </svg>
+                                </div>
+                                <span>All Files</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="nav-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                        <path
+                                            opacity="0.3"
+                                            d="M10.9 2C11.4523 2 11.9 2.44772 11.9 3C11.9 3.55228 11.4523 4 10.9 4H6C4.89543 4 4 4.89543 4 6V18C4 19.1046 4.89543 20 6 20H18C19.1046 20 20 19.1046 20 18V16C20 15.4477 20.4477 15 21 15C21.5523 15 22 15.4477 22 16V18C22 20.2091 20.2091 22 18 22H6C3.79086 22 2 20.2091 2 18V6C2 3.79086 3.79086 2 6 2H10.9Z"
+                                            fill="#51459E"
+                                        />
+                                        <path
+                                            d="M7.00455 13.8973C7.00455 13.1346 6.84111 10.1246 9.21552 7.73659C10.8136 6.12944 13.2053 5.85068 16.0654 5.72356V1.83791C16.0654 1.18717 16.8374 0.845197 17.3194 1.28244L23.8275 7.18682C24.1534 7.4824 24.156 7.99364 23.8332 8.29256L17.325 14.3198C16.8449 14.7645 16.0654 14.4239 16.0654 13.7695V9.90761C14.2494 9.95755 12.9559 10.0731 11.7806 10.447C9.50904 11.1696 8.16113 14.2685 7.79763 15.2124C7.73495 15.3752 7.57969 15.4863 7.40526 15.4863C7.18144 15.4863 7.00007 15.305 7.00078 15.0812C7.00208 14.6691 7.00455 14.1955 7.00455 13.8973Z"
+                                            fill="#51459E"
+                                        />
+                                    </svg>
+                                </div>
+                                <span>Shared</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="nav-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            d="M16.5 4.5C14.8905 4.5 13.0083 6.32463 12 7.5C10.9917 6.32463 9.1095 4.5 7.5 4.5C4.651 4.5 3 6.72218 3 9.55041C3 14.25 12 19.5 12 19.5C12 19.5 21 14.25 21 9.75C21 6.92177 19.349 4.5 16.5 4.5Z"
+                                            fill="#51459E"
+                                        />
+                                    </svg>
+                                </div>
+                                <span>Favorites</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="nav-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M20 10.793C19.5232 10.9278 19.02 11 18.5 11C15.4624 11 13 8.53757 13 5.5C13 4.97999 13.0722 4.47683 13.207 4H7C5.34315 4 4 5.34315 4 7V17C4 18.6569 5.34315 20 7 20H17C18.6569 20 20 18.6569 20 17V10.793Z"
+                                            fill="#51459E"
+                                        />
+                                        <path
+                                            opacity="0.3"
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M18.5 8C19.8807 8 21 6.88071 21 5.5C21 4.11929 19.8807 3 18.5 3C17.1193 3 16 4.11929 16 5.5C16 6.88071 17.1193 8 18.5 8Z"
+                                            fill="#51459E"
+                                        />
+                                    </svg>
+                                </div>
+                                <span>Recent</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="nav-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M20 9H15V4C15 4 15 3 14 3C13 3 13 4 13 4V11H20C20 11 21 10.8284 21 10C21 9.17157 20 9 20 9ZM5 14H10V19C10 19 10 20 11 20C12 20 12 19 12 19V12H5C5 12 4 12.1716 4 13C4 13.8284 5 14 5 14Z"
+                                            fill="#51459E"
+                                        />
+                                        <path
+                                            opacity="0.3"
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M16.8787 5.70711C16.4882 6.09763 16.4882 6.73079 16.8787 7.12132C17.2692 7.51184 17.9024 7.51184 18.2929 7.12132L21.1213 4.29289C21.5119 3.90237 21.5119 3.2692 21.1213 2.87868C20.7308 2.48815 20.0977 2.48815 19.7071 2.87868L16.8787 5.70711ZM3.87871 18.7071C3.48818 19.0976 3.48818 19.7308 3.87871 20.1213C4.26923 20.5118 4.9024 20.5118 5.29292 20.1213L8.12135 17.2929C8.51187 16.9024 8.51187 16.2692 8.12135 15.8787C7.73082 15.4882 7.09766 15.4882 6.70714 15.8787L3.87871 18.7071Z"
+                                            fill="#51459E"
+                                        />
+                                    </svg>
+                                </div>
+                                <span>Request</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="nav-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M5 7C3.89543 7 3 7.89543 3 9V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V9C21 7.89543 20.1046 7 19 7H5ZM8 13C8 15.2091 9.79086 17 12 17C14.2091 17 16 15.2091 16 13C16 10.7909 14.2091 9 12 9C9.79086 9 8 10.7909 8 13Z"
+                                            fill="#51459E"
+                                        />
+                                        <rect opacity="0.3" x="9" y="4" width="6" height="2" rx="1" fill="#51459E" />
+                                        <path
+                                            opacity="0.3"
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M12 15C13.1046 15 14 14.1046 14 13C14 11.8954 13.1046 11 12 11C10.8954 11 10 11.8954 10 13C10 14.1046 10.8954 15 12 15Z"
+                                            fill="#51459E"
+                                        />
+                                    </svg>
+                                </div>
+                                <span>Pictures</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="nav-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <rect x="2" y="6" width="13" height="12" rx="2" fill="#51459E" />
+                                        <path
+                                            opacity="0.3"
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M20.2929 7.7071C20.9228 7.07714 22 7.52331 22 8.41421V15.5858C22 16.4767 20.9228 16.9229 20.2929 16.2929L16.7071 12.7071C16.3166 12.3166 16.3166 11.6834 16.7071 11.2929L20.2929 7.7071Z"
+                                            fill="#51459E"
+                                        />
+                                    </svg>
+                                </div>
+                                <span>Videos</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="nav-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            opacity="0.3"
+                                            d="M5.85714 2H13.7364C14.0911 2 14.4343 2.12568 14.7051 2.35474L19.4687 6.38394C19.8057 6.66895 20 7.08788 20 7.5292V20.0833C20 21.8739 19.9796 22 18.1429 22H5.85714C4.02045 22 4 21.8739 4 20.0833V3.91667C4 2.12612 4.02045 2 5.85714 2Z"
+                                            fill="#51459E"
+                                        />
+                                        <rect x="6" y="11" width="9" height="2" rx="1" fill="#51459E" />
+                                        <rect x="6" y="15" width="5" height="2" rx="1" fill="#51459E" />
+                                    </svg>
+                                </div>
+                                <span>Documents</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="nav-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            opacity="0.3"
+                                            d="M5.85714 2H13.7364C14.0911 2 14.4343 2.12568 14.7051 2.35474L19.4687 6.38394C19.8057 6.66895 20 7.08788 20 7.5292V20.0833C20 21.8739 19.9796 22 18.1429 22H5.85714C4.02045 22 4 21.8739 4 20.0833V3.91667C4 2.12612 4.02045 2 5.85714 2Z"
+                                            fill="#51459E"
+                                        />
+                                        <rect x="7" y="17" width="9" height="1" rx="0.5" fill="#51459E" />
+                                        <path
+                                            d="M16.1692 8.70955C16.755 9.29534 16.755 10.2451 16.1692 10.8309L11.8574 15.1427C11.5872 15.413 11.2239 15.5699 10.8418 15.5813L9.87087 15.6105C9.01645 15.6362 8.31336 14.9437 8.32601 14.089L8.33945 13.1805C8.34522 12.7904 8.50276 12.4179 8.77863 12.142L13.1295 7.79114C13.7153 7.20535 14.665 7.20535 15.2508 7.79114L16.1692 8.70955Z"
+                                            fill="#51459E"
+                                        />
+                                    </svg>
+                                </div>
+                                <span>Signed</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- user space -->
+                <div class="use-space">
+                    <div class="used-gb">
+                        <h2>25.32 GB <span>used</span></h2>
+                        <h5>79% used - 6.64 GB free</h5>
+                    </div>
+                    <div class="user-line-bar progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="43" aria-valuemin="0" aria-valuemax="100" style="width: 140px;"></div>
+                    </div>
+                    <div class="add-more-space-btn">
+                        <a class="common-btn" href="#">Add More Space</a>
+                    </div>
+                </div>
+            </aside>
+            <!-- End Sidebar -->
+            <!-- ======= Main Content ======= -->
+            <main>
+                <div id="main-content-wapper" class="main-content-wapper">
+                    <!--start main body content -->
+                    <div class="main-body-content">
+                        <!--Start folder wise storage -->
+                        <div class="folder-wies-storage-grid">
+                            <!-- storage single item -->
+                            <div class="storage-single-item">
+                                <div class="storage-image">
+                                    <div class="folder-image">
+                                        <img src="/src/images/f1.png" alt="folder" />
+                                    </div>
+                                    <div class="folder-action">
+                                        <a href="#">
+                                            <img src="/src/images/dot.png" alt="dot" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <h3>Design</h3>
+                                <div class="storage-file-content">
+                                    <h5>17 files</h5>
+                                    <h5>12 GB</h5>
+                                </div>
+                            </div>
+                            <!-- storage single item -->
+                            <div class="storage-single-item active">
+                                <div class="storage-image">
+                                    <div class="folder-image">
+                                        <img src="/src/images/f2.png" alt="folder" />
+                                    </div>
+                                    <div class="folder-action">
+                                        <a href="#">
+                                            <img src="/src/images/dot.png" alt="dot" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <h3>Documents</h3>
+                                <div class="storage-file-content">
+                                    <h5>17 files</h5>
+                                    <h5>12 GB</h5>
+                                </div>
+                            </div>
+                            <!-- storage single item -->
+                            <div class="storage-single-item">
+                                <div class="storage-image">
+                                    <div class="folder-image">
+                                        <img src="/src/images/f3.png" alt="folder" />
+                                    </div>
+                                    <div class="folder-action">
+                                        <a href="#">
+                                            <img src="/src/images/dot.png" alt="dot" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <h3>Music</h3>
+                                <div class="storage-file-content">
+                                    <h5>1200 files</h5>
+                                    <h5>24 GB</h5>
+                                </div>
+                            </div>
+                            <!-- storage single item -->
+                            <div class="storage-single-item hidden">
+                                <div class="storage-image">
+                                    <div class="folder-image">
+                                        <img src="/src/images/f4.png" alt="folder" />
+                                    </div>
+                                    <div class="folder-action">
+                                        <a href="#">
+                                            <img src="/src/images/dot.png" alt="dot" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <h3>Images</h3>
+                                <div class="storage-file-content">
+                                    <h5>270 files</h5>
+                                    <h5>24 GB</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End folder wise storage -->
+
+                        <!--Start quick access -->
+                        <div class="quick-access">
+                            <h2>Quick Access</h2>
+                            <div class="quick-access-main-grid">
+                                <!-- quick access single item -->
+                                <div class="quick-access-single-item">
+                                    <div class="quick-access-image">
+                                        <a href="#">
+                                            <img src="/src/images/q1.png" alt="quick" />
+                                        </a>
+                                    </div>
+                                    <div class="quick-access-inner">
+                                        <a href="#">
+                                            <img src="/src/images/qi1.png" alt="icon" />
+                                            <h5>Building Image.<span>jpeg</span></h5>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- quick access single item -->
+                                <div class="quick-access-single-item">
+                                    <div class="quick-access-image">
+                                        <a href="#">
+                                            <img src="/src/images/q2.png" alt="quick" />
+                                        </a>
+                                    </div>
+                                    <div class="quick-access-inner">
+                                        <a href="#">
+                                            <img src="/src/images/qi2.png" alt="icon" />
+                                            <h5>Product Video.<span>mp4</span></h5>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- quick access single item -->
+                                <div class="quick-access-single-item">
+                                    <div class="quick-access-image">
+                                        <a href="#">
+                                            <img src="/src/images/q1.png" alt="quick" />
+                                        </a>
+                                    </div>
+                                    <div class="quick-access-inner">
+                                        <a href="#">
+                                            <img src="/src/images/qi3.png" alt="icon" />
+                                            <h5>Customers.<span>pdf</span></h5>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End quick access -->
+
+                        <!-- start recent upload and file manager -->
+                        <div class="recent-upload-file-manager-main-grid">
+                            <!-- recent upload -->
+                            <div class="recent-upload-flex">
+                                <h2>Recently Uploaded</h2>
+                                <div class="recent-upload-list">
+                                    <ul>
+                                        <li class="recent-upload-parent">
+                                            <div class="upload-image-content">
+                                                <img src="/src/images/r1.png" alt="recent" />
+                                                <div class="upload-content">
+                                                    <h4>Marcus Family.jpg</h4>
+                                                    <h5>10 oct, 10:23pm</h5>
+                                                </div>
+                                            </div>
+                                            <span>12 MB</span>
+                                        </li>
+                                        <li class="recent-upload-parent">
+                                            <div class="upload-image-content">
+                                                <img src="/src/images/r2.png" alt="recent" />
+                                                <div class="upload-content">
+                                                    <h4>Marcus Family.jpg</h4>
+                                                    <h5>10 oct, 10:23pm</h5>
+                                                </div>
+                                            </div>
+                                            <span>12 MB</span>
+                                        </li>
+                                        <li class="recent-upload-parent">
+                                            <div class="upload-image-content">
+                                                <img src="/src/images/r3.png" alt="recent" />
+                                                <div class="upload-content">
+                                                    <h4>Marcus Family.jpg</h4>
+                                                    <h5>10 oct, 10:23pm</h5>
+                                                </div>
+                                            </div>
+                                            <span>12 MB</span>
+                                        </li>
+                                        <li class="recent-upload-parent">
+                                            <div class="upload-image-content">
+                                                <img src="/src/images/r4.png" alt="recent" />
+                                                <div class="upload-content">
+                                                    <h4>Marcus Family.jpg</h4>
+                                                    <h5>10 oct, 10:23pm</h5>
+                                                </div>
+                                            </div>
+                                            <span>12 MB</span>
+                                        </li>
+                                        <li class="recent-upload-parent">
+                                            <div class="upload-image-content">
+                                                <img src="/src/images/r5.png" alt="recent" />
+                                                <div class="upload-content">
+                                                    <h4>Marcus Family.jpg</h4>
+                                                    <h5>10 oct, 10:23pm</h5>
+                                                </div>
+                                            </div>
+                                            <span>12 MB</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- file manager -->
+                            <div class="file-manager-flex">
+                                <div class="file-heading">
+                                    <h2>File Manager</h2>
+                                    <a href="#"> <img src="/src/images/more.png" alt="more" /></a>
+                                </div>
+                                <div class="file-manager-inner-grid">
+                                    <!-- single item -->
+                                    <div class="file-manager-single-item">
+                                        <img src="/src/images/filesicon.png" alt="filesicon" />
+                                        <h4>My Folder</h4>
+                                        <p>created Jun 23, 2020</p>
+                                    </div>
+                                    <!-- single item -->
+                                    <div class="file-manager-single-item">
+                                        <img src="/src/images/qi3.png" alt="filesicon" />
+                                        <h4>Aggreement.pdf</h4>
+                                        <p>created Jun 23, 2020</p>
+                                    </div>
+                                    <!-- single item -->
+                                    <div class="file-manager-single-item">
+                                        <img src="/src/images/filesicon.png" alt="filesicon" />
+                                        <h4>Other Folder</h4>
+                                        <p>created Jun 23, 2020</p>
+                                    </div>
+                                    <!-- single item -->
+                                    <div class="file-manager-single-item">
+                                        <img src="/src/images/qi3.png" alt="filesicon" />
+                                        <h4>Blueprints</h4>
+                                        <p>created Jun 23, 2020</p>
+                                    </div>
+                                </div>
+                                <div class="open-file-manager-btn">
+                                    <a class="common-btn" href="#">Open File Manager</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End recent upload and file manager -->
+                    </div>
+                    <!--End main body content -->
+
+                    <!-- right side bar -->
+                    <div class="right-sidebar">
+                        <div class="right-sidebar-inner">
+                            <!-- chart bar -->
+                            <div class="chart-bar-heading">
+                                <h2>Usage Stats</h2>
+                                <div class="char-bar">
+                                    <img src="src/images/graph.png" alt="graph" />
+                                </div>
+                            </div>
+                            <!-- Shared folder -->
+                            <div class="shared-floder-main">
+                                <div class="recent-upload-flex">
+                                    <h2>Shared Folders</h2>
+                                    <div class="recent-upload-list">
+                                        <ul>
+                                            <li class="recent-upload-parent">
+                                                <div class="upload-image-content">
+                                                    <div class="shared-floder-img">
+                                                        <img src="/src/images/sf.png" alt="recent" />
+                                                    </div>
+                                                    <div class="upload-content">
+                                                        <h4>Sketch Files</h4>
+                                                        <h5>Shared with: mike@getnextdesign.com</h5>
+                                                    </div>
+                                                </div>
+                                                <span>10 oct, 10:23pm</span>
+                                            </li>
+                                            <li class="recent-upload-parent">
+                                                <div class="upload-image-content">
+                                                    <div class="shared-floder-img">
+                                                        <img src="/src/images/sf.png" alt="recent" />
+                                                    </div>
+                                                    <div class="upload-content">
+                                                        <h4>AutoCad Drawings</h4>
+                                                        <h5>Shared with: shakir@gmail.com</h5>
+                                                    </div>
+                                                </div>
+                                                <span>10 oct, 10:23pm</span>
+                                            </li>
+                                            <li class="recent-upload-parent">
+                                                <div class="upload-image-content">
+                                                    <div class="shared-floder-img">
+                                                        <img src="/src/images/sf.png" alt="recent" />
+                                                    </div>
+                                                    <div class="upload-content">
+                                                        <h4>Master Speardsheets</h4>
+                                                        <h5>Shared with: john@google.com</h5>
+                                                    </div>
+                                                </div>
+                                                <span>10 oct, 10:23pm</span>
+                                            </li>
+                                            <li class="recent-upload-parent">
+                                                <div class="upload-image-content">
+                                                    <div class="shared-floder-img">
+                                                        <img src="/src/images/sf.png" alt="recent" />
+                                                    </div>
+                                                    <div class="upload-content">
+                                                        <h4>Design Comps</h4>
+                                                        <h5>Shared with: kelvin@hunter.com</h5>
+                                                    </div>
+                                                </div>
+                                                <span>10 oct, 10:23pm</span>
+                                            </li>
+                                            <li class="recent-upload-parent">
+                                                <div class="upload-image-content">
+                                                    <div class="shared-floder-img">
+                                                        <img src="/src/images/sf.png" alt="recent" />
+                                                    </div>
+                                                    <div class="upload-content">
+                                                        <h4>Final Revisions</h4>
+                                                        <h5>Shared with: saim@purepixel.com</h5>
+                                                    </div>
+                                                </div>
+                                                <span>10 oct, 10:23pm</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- friend and get -->
+                            <div class="friend-get-main">
+                                <div class="friend-get-inner-contet">
+                                    <h3>Invite 2 friends and get 5 GB extra space.</h3>
+                                    <a class="common-btn" href="#">Invite Now!</a>
+                                </div>
+                                <div class="friend-get-overly"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- right side bar -->
+                </div>
+            </main>
+            <!-- End Main Content -->
+        </div>
+        <script type="module" src="/src/js/main.js"></script>
+    </body>
+</html>
