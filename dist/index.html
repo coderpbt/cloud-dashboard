@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <title>Cloud Dashboard</title>
+      <script type="module" crossorigin src="/assets/index-89838d44.js"></script>
+      <link rel="stylesheet" href="/assets/index-2abefbda.css">
+    </head>
+    <body>
+        <div class="main-wapper">
+            <!-- ======= Header ======= -->
+            <header id="header" class="header">
+                <div class="header-main-grid">
+                    <!-- logo -->
+                    <div class="logo">
+                        <a href="/"><span>M</span><img src="data:image/png;base64,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" alt="logo" /></a>
+                        <div class="toggle-bar-icon">
+                            <img class="bar" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAcgAAAGcCAYAAABdvjALAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RDQ5QkM2MzU0NDA0MTFFRTk0MDhDNjEzMTM1MDJFRkMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RDQ5QkM2MzY0NDA0MTFFRTk0MDhDNjEzMTM1MDJFRkMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpENDlCQzYzMzQ0MDQxMUVFOTQwOEM2MTMxMzUwMkVGQyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpENDlCQzYzNDQ0MDQxMUVFOTQwOEM2MTMxMzUwMkVGQyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pr4tRAcAAAavSURBVHja7N3BTuww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" alt="menu">
+                        </div>
+                    </div>
+                    <!-- logo -->
+                    <!-- srarch filter -->
+                    <div class="search-filter-main-flex">
+                        <div class="search-bar">
+                            <form>
+                                <input type="text" placeholder="Search Files..." />
+                                <button type="submit" class="search-icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAASESURBVHgBzVm/b9tWEL57lBMXBQol/QEUcBIWcYpu1VJY6lJ1SyerY6e6m4emZcdOtv+CyAnQ1e5UZLOnjpWXmm4XezMQtSBQo+jQJMoUOxLf5e6RlJ9kyhIj2dQHUHh6JMiPd/d+fB8RXgNu1SsWjjslQlVDjbdQQYm7i/EhaBFAAJoP0Duow8bjP3/ahzGAWS6eL39bFXIK8GuL1KgINOm1EJxG4NcDyIiRiH5U9twO0AYiVK3uFhBtA6gGhLDfdvh/jJkQiuTwi1BYQoU1fsxnNmHSer2597AOGTCU6PzCPQ+VWoE4ggRMjlS96dcbMCKkVGaOoYZIK1wSbtwdtAk/HzW6eN7Nr5zQBt+4FvXQTpvU0uukzcadsrdkE+bo/jBKdJ20Tkk1avqVm1UwAwN/bO6uL7eO/BaMiadH/v67c5VtDpErj0LEu9fnFrh/bweyEJVIqpB25SYgI7eDXzT36lswQfzPL/zkaO/ROzcrktEqk60OI3uG6HvvL/zCaSlDXEN//1E/hAvCk3/8hk322o3KwbMj/3Ao0fnydyuAuMzNFpOsjFuPo5J9++bCNR4uZWZ89625yqO0ElNJw9Ql4qq0uSbXLoNkgse/P/C4ZmVBKM4gbaRd0yUaol41DYLN5m490xw3CTgav4yb1fmyV+0/b4hKNCFabaDN0YQccMgZJCLzbJm++s8bonY0LzPl/ejMKsmk1OeZqMapx0X55dr8GXJE0KjznE1miiLUNfucko0GRMtjkGVZvDCQiSpHMApeAoW8G4ougAZMATqzkGwHXbe87Cb9igg/lgaRPoApgKQ/nqp4JiiUkn6lkD4wLXTG2thOFJpM0Hhed5MuxQPoljQ6cBzAtADjvS1id3OuYApBFBFNgiiYSqJdID1PmkJ07D3mpMGSx6Qc6ZQbT1eiFHtHWN5IZiJuWERTRljeUBjrKmsm4nmUzB8WcIswBZANUqKn7JVSFdBJZEZJZAjkjBASSU49skQdRrulBh/FwotwCXJGssXTRJt2v5meOP2GPaf/e8gRxomJ0t4SR8U+Z4ha+0D3dvneEuQEhU4kQwi2+vfFhqjZBxKtRxer+3nUqjgycTSDNJXRXZma/oPVRGAVTtIF1kXBCMvINgIx0tJURu8S2sZv+LfFsrVmpPMlkdRIv3GzyM/d+st/uJl2XY+uf/qv/9/1G5UT0dejuBeTItlNOeFXg2yjM04Je0N+FqtlQiQFLc2abRDRgW7eh596qzzAkvRnsgiHoc/KDISEFdXU55zrj96ueDUH6H73rVlOt8dwUSIh6aycGsJsZV5VtdljKPaVwBmyQ41cSVGk+yODIiGsMdwOrxYaRuOcAxFoBZqp8WqyaDnWYmWu2Y5MSr32kB3ZwxdDACPCts0tKds3HxWQDk77+AME8SiOPkK41uUtrvv1l1egnvaC55HN9LFBcOcTrwQF7SETpl4Sg8CE6IA0bXXecDaHZWAQ2cxE+2/aRijx5xlXhBgmdrcZICowHyHehGAYuVHIjkX0ItFPdmqJCrpkWT6/AsvsNV8Cxk3rAAAAAElFTkSuQmCC" alt="search" /></button>
+                            </form>
+                        </div>
+                        <div class="filter-search">
+                            <select>
+                                <option>Filter</option>
+                                <option>Filter 2</option>
+                                <option>Filter 3</option>
+                            </select>
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAANCAYAAACtpZ5jAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACWSURBVHgBrdO7DYAgEAbg/0hMHIPKOIKWTqSjuJGtW8geJiJECyMgB0gF3PGF11HTj5sGsGsa1DorFLS2m+RBerGeuOdkZSakCSCzPVBpx0KYnRKgSvAXqvbL9Ae41xJaS7GEHNTGiJuYgjowF+fkEBJ3wz2VFw4BtelwryoI+3CbzH3cT9iDA8wfE4Vf+C+l7+ApVXkC60vFA1FC5eEAAAAASUVORK5CYII=" alt="arrow-down" />
+                        </div>
+                    </div>
+                    <!-- srarch filter -->
+                    <!-- user profile -->
+                    <div class="user-profile-flex">
+                        <div class="search has-dropdown">
+                            <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAASESURBVHgBzVm/b9tWEL57lBMXBQol/QEUcBIWcYpu1VJY6lJ1SyerY6e6m4emZcdOtv+CyAnQ1e5UZLOnjpWXmm4XezMQtSBQo+jQJMoUOxLf5e6RlJ9kyhIj2dQHUHh6JMiPd/d+fB8RXgNu1SsWjjslQlVDjbdQQYm7i/EhaBFAAJoP0Duow8bjP3/ahzGAWS6eL39bFXIK8GuL1KgINOm1EJxG4NcDyIiRiH5U9twO0AYiVK3uFhBtA6gGhLDfdvh/jJkQiuTwi1BYQoU1fsxnNmHSer2597AOGTCU6PzCPQ+VWoE4ggRMjlS96dcbMCKkVGaOoYZIK1wSbtwdtAk/HzW6eN7Nr5zQBt+4FvXQTpvU0uukzcadsrdkE+bo/jBKdJ20Tkk1avqVm1UwAwN/bO6uL7eO/BaMiadH/v67c5VtDpErj0LEu9fnFrh/bweyEJVIqpB25SYgI7eDXzT36lswQfzPL/zkaO/ROzcrktEqk60OI3uG6HvvL/zCaSlDXEN//1E/hAvCk3/8hk322o3KwbMj/3Ao0fnydyuAuMzNFpOsjFuPo5J9++bCNR4uZWZ89625yqO0ElNJw9Ql4qq0uSbXLoNkgse/P/C4ZmVBKM4gbaRd0yUaol41DYLN5m490xw3CTgav4yb1fmyV+0/b4hKNCFabaDN0YQccMgZJCLzbJm++s8bonY0LzPl/ejMKsmk1OeZqMapx0X55dr8GXJE0KjznE1miiLUNfucko0GRMtjkGVZvDCQiSpHMApeAoW8G4ougAZMATqzkGwHXbe87Cb9igg/lgaRPoApgKQ/nqp4JiiUkn6lkD4wLXTG2thOFJpM0Hhed5MuxQPoljQ6cBzAtADjvS1id3OuYApBFBFNgiiYSqJdID1PmkJ07D3mpMGSx6Qc6ZQbT1eiFHtHWN5IZiJuWERTRljeUBjrKmsm4nmUzB8WcIswBZANUqKn7JVSFdBJZEZJZAjkjBASSU49skQdRrulBh/FwotwCXJGssXTRJt2v5meOP2GPaf/e8gRxomJ0t4SR8U+Z4ha+0D3dvneEuQEhU4kQwi2+vfFhqjZBxKtRxer+3nUqjgycTSDNJXRXZma/oPVRGAVTtIF1kXBCMvINgIx0tJURu8S2sZv+LfFsrVmpPMlkdRIv3GzyM/d+st/uJl2XY+uf/qv/9/1G5UT0dejuBeTItlNOeFXg2yjM04Je0N+FqtlQiQFLc2abRDRgW7eh596qzzAkvRnsgiHoc/KDISEFdXU55zrj96ueDUH6H73rVlOt8dwUSIh6aycGsJsZV5VtdljKPaVwBmyQ41cSVGk+yODIiGsMdwOrxYaRuOcAxFoBZqp8WqyaDnWYmWu2Y5MSr32kB3ZwxdDACPCts0tKds3HxWQDk77+AME8SiOPkK41uUtrvv1l1egnvaC55HN9LFBcOcTrwQF7SETpl4Sg8CE6IA0bXXecDaHZWAQ2cxE+2/aRijx5xlXhBgmdrcZICowHyHehGAYuVHIjkX0ItFPdmqJCrpkWT6/AsvsNV8Cxk3rAAAAAElFTkSuQmCC" alt="search" /></a>
+                            <ul class="child-dropdown">
+                                <li class="search-form-mobile">
+                                    <form>
+                                        <input type="text" placeholder="Search Files..." />
+                                        <button type="submit" class="search-icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAASESURBVHgBzVm/b9tWEL57lBMXBQol/QEUcBIWcYpu1VJY6lJ1SyerY6e6m4emZcdOtv+CyAnQ1e5UZLOnjpWXmm4XezMQtSBQo+jQJMoUOxLf5e6RlJ9kyhIj2dQHUHh6JMiPd/d+fB8RXgNu1SsWjjslQlVDjbdQQYm7i/EhaBFAAJoP0Duow8bjP3/ahzGAWS6eL39bFXIK8GuL1KgINOm1EJxG4NcDyIiRiH5U9twO0AYiVK3uFhBtA6gGhLDfdvh/jJkQiuTwi1BYQoU1fsxnNmHSer2597AOGTCU6PzCPQ+VWoE4ggRMjlS96dcbMCKkVGaOoYZIK1wSbtwdtAk/HzW6eN7Nr5zQBt+4FvXQTpvU0uukzcadsrdkE+bo/jBKdJ20Tkk1avqVm1UwAwN/bO6uL7eO/BaMiadH/v67c5VtDpErj0LEu9fnFrh/bweyEJVIqpB25SYgI7eDXzT36lswQfzPL/zkaO/ROzcrktEqk60OI3uG6HvvL/zCaSlDXEN//1E/hAvCk3/8hk322o3KwbMj/3Ao0fnydyuAuMzNFpOsjFuPo5J9++bCNR4uZWZ89625yqO0ElNJw9Ql4qq0uSbXLoNkgse/P/C4ZmVBKM4gbaRd0yUaol41DYLN5m490xw3CTgav4yb1fmyV+0/b4hKNCFabaDN0YQccMgZJCLzbJm++s8bonY0LzPl/ejMKsmk1OeZqMapx0X55dr8GXJE0KjznE1miiLUNfucko0GRMtjkGVZvDCQiSpHMApeAoW8G4ougAZMATqzkGwHXbe87Cb9igg/lgaRPoApgKQ/nqp4JiiUkn6lkD4wLXTG2thOFJpM0Hhed5MuxQPoljQ6cBzAtADjvS1id3OuYApBFBFNgiiYSqJdID1PmkJ07D3mpMGSx6Qc6ZQbT1eiFHtHWN5IZiJuWERTRljeUBjrKmsm4nmUzB8WcIswBZANUqKn7JVSFdBJZEZJZAjkjBASSU49skQdRrulBh/FwotwCXJGssXTRJt2v5meOP2GPaf/e8gRxomJ0t4SR8U+Z4ha+0D3dvneEuQEhU4kQwi2+vfFhqjZBxKtRxer+3nUqjgycTSDNJXRXZma/oPVRGAVTtIF1kXBCMvINgIx0tJURu8S2sZv+LfFsrVmpPMlkdRIv3GzyM/d+st/uJl2XY+uf/qv/9/1G5UT0dejuBeTItlNOeFXg2yjM04Je0N+FqtlQiQFLc2abRDRgW7eh596qzzAkvRnsgiHoc/KDISEFdXU55zrj96ueDUH6H73rVlOt8dwUSIh6aycGsJsZV5VtdljKPaVwBmyQ41cSVGk+yODIiGsMdwOrxYaRuOcAxFoBZqp8WqyaDnWYmWu2Y5MSr32kB3ZwxdDACPCts0tKds3HxWQDk77+AME8SiOPkK41uUtrvv1l1egnvaC55HN9LFBcOcTrwQF7SETpl4Sg8CE6IA0bXXecDaHZWAQ2cxE+2/aRijx5xlXhBgmdrcZICowHyHehGAYuVHIjkX0ItFPdmqJCrpkWT6/AsvsNV8Cxk3rAAAAAElFTkSuQmCC" alt="search" /></button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="notifaction has-dropdown">
+                            <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAtCAYAAAA3BJLdAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAUeSURBVHgB7Zm/bxtlGMe/z9lpU1VtTcWCCKqj2hJMmIHU6YIzIJWJCCbEEI8Mbe0sXZMsrLVhgC0JYgEJJfAPYC8kdGk6IZEMhxS2irowEMf2PTzPe3dOzvbF519NBz7S5e7ee+/um+ee93nf5zFwTjBzQrYV2X6W7Rm7PPPOi7Il8TLgifEFnsUKzhMRsM6Dse7fG8eQJHPFRPyomWHEloiQIWmS5oR32WaGDXZ+bFJs294t2Z7Qh7LLYzDycl+NiJYJA+KKdApyc/GUuLNhbHz71V17LpNaDbT/Wweqe8CvvwF//Q1cvwqkXgc+uOUeB1kYyLLpd4sZqvMWEyU9FVV2eJucWKVxGbZdKdX8fk4cSQvOIkBLIOSvXL4UfJiK+/IH2f8TbHsk28GfwL2POgWvRLbszez9JYuoBLUmYY8dWj7YLVX63fdmtphMp197+NM3DxYDF9bWg0I7UQvf+zjQFEnszfniogXecs+4vL/zRREDID6nQrfaDWo5tWo/1Lqpmfap1a+/WkaEmhEpfro2qFCPTOBs/xCROHwaOO3rsy0yFk3oIPl9p7SKcXDpYrR+OgBPcaZl09liHq5V7AZoDcNjB85mXkUk1G9PcaZYBi/p3mFnzY+VQ1IJnKkfdgjpQiNBeibQFCpWfVWCfU6PW9OxbYyA+LqNTsGfvi+CriBUqA6uIHuhYhvU9AYFV/34OSJr3YIkNM29dSJa93fmgAef9JoUyqEDjNjKaGCTabOCMSDWrUgIK8thISBYLdyfsty/EWpZb65Xv7UxJrwpehODsend1z/Ojht5cR6dLtEbdb1lr78hVCyTt0hxeBz+GkAErMpu9vPSFh49PvCF+fsq3H9mltzpvU34pMB0TX2BrPjYxXqC7fR8ARvfV7G/U34lyj0v3A1G4X+xkyJUrEU8q/smjmy8JIRHA9AN3du7X9uYHGbwaqoUpXNPsenbRX/9uYcJQuDn5uDoaHixcNzFssxef2CCOJ4xYk48E6V/T7FMjsmXZC4fabXVD/LWuWRZw4k1S0PQh3rcQqyCCcJsGWPIBPFelP5dYlvkrLpPwsaIC+6+NKeNG+ggy2n63q9/QGwqezdn8nxhxDQmEu46md1VWIwL/fq3xZoslmLtLHbSVvWJsaWLlZoWQlLZYu7MvvpHhTokpUYJeeKvm5LFDpNuD8XTw93a9Tfm6zLY7kgatXh1Zv67mrT16mss25S6gCsU2yI0jxfMwU6ppEaSw8SUGC1skjBi/cTwmGkZ58TxRRS1LCWHSSn89fyyvs8as0+1IlYFJ4AZbA5pjtae6jsxi29N5GRQrSDOW6lbhT3JEoI+Q/ycGF1+RD3ys7CcrYlmd/v0dM3PnM2nP5aIwPo65wnCxDanrVK87mR0MiDL+G6XrN4lPIrQ4jLljuUgdYZmC/6xh60FaPR7W7uuykF3YG5JmZMSPW5O9nhid1tIX/nc13BSkNaY+6TBVj4sbA5c+XZjoZM7eaOW0IMuImGw1uk2TcTtUWP3UL8pGP8+Oem67oaYjhcxFtBZoBuQgcXqfD5VN1ZLiJdtE3tr0lOIfr2WkDFwg93Pb0epko9drI7eVPa+iR5ivEwD1kKvz+vPijDiadAqTE8G9lmf9O3CYxkhpnarJVFdTqroZPazZBwXltq/5kig3/+l/A7GwNC/gzUu0MJU3SnpKs0ia11K+SdhqA1XGxesRYyJoS3rY6rj5OTlUW/DDUMmBMnCenUcfnqa/wCUzUP9CwlNnQAAAABJRU5ErkJggg==" alt="bell" /></a>
+                            <ul class="child-dropdown">
+                                <li><a href="#">Quae dolorem earum veritatis oditseno 30 min. ago</a></li>
+                                <li><a href="#">Quae dolorem earum veritatis oditseno 30 min. ago</a></li>
+                                <li><a href="#">Quae dolorem earum veritatis oditseno 30 min. ago</a></li>
+                                <li><a href="#">Quae dolorem earum veritatis oditseno 30 min. ago</a></li>
+                            </ul>
+                        </div>
+                        <div class="profile">
+                            <div class="user-profile has-dropdown">
+                                <a href="#">
+                                    <div class="profile-img">
+                                        <img src="/assets/profile-024db5c9.png" alt="profile" />
+                                    </div>
+                                    <div class="profile-text">
+                                        <h3>hrk</h3>
+                                        <p>hrk041999@gmail.com</p>
+                                    </div>
+                                </a>
+                                <div class="profile-dropdown">
+                                    <ul class="child-dropdown">
+                                        <li><a href="#">My Profile</a></li>
+                                        <li><a href="#">Add Fund</a></li>
+                                        <li><a href="#">API Documentation</a></li>
+                                        <li><a href="#">Log Out</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- user profile -->
+                </div>
+            </header>
+            <!-- End Header -->
+
+            <!-- ======= Sidebar ======= -->
+            <aside id="sidebar" class="sidebar">
+                <nav class="sidebar-nav">
+                    <!-- <div class="crose-bar-top">
+                    <i class="far fa-times-circle crosse-bar"></i>
+                </div> -->
+                    <ul class="nav-menu">
+                        <li class="active">
+                            <a href="#">
+                                <div class="nav-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <rect x="4" y="4" width="7" height="7" rx="1.5" fill="#DEE1E6" />
+                                        <path
+                                            opacity="0.3"
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M13 5.5C13 4.67157 13.6716 4 14.5 4H18.5C19.3284 4 20 4.67157 20 5.5V9.5C20 10.3284 19.3284 11 18.5 11H14.5C13.6716 11 13 10.3284 13 9.5V5.5ZM4 14.5C4 13.6716 4.67157 13 5.5 13H9.5C10.3284 13 11 13.6716 11 14.5V18.5C11 19.3284 10.3284 20 9.5 20H5.5C4.67157 20 4 19.3284 4 18.5V14.5ZM14.5 13C13.6716 13 13 13.6716 13 14.5V18.5C13 19.3284 13.6716 20 14.5 20H18.5C19.3284 20 20 19.3284 20 18.5V14.5C20 13.6716 19.3284 13 18.5 13H14.5Z"
+                                            fill="#DEE1E6"
+                                        />
+                                    </svg>
+                                </div>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="nav-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <rect opacity="0.3" x="4" y="4" width="4" height="4" rx="1" fill="#51459E" />
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M11 4C10.4477 4 10 4.44772 10 5V7C10 7.55228 10.4477 8 11 8H13C13.5523 8 14 7.55228 14 7V5C14 4.44772 13.5523 4 13 4H11ZM5 10C4.44772 10 4 10.4477 4 11V13C4 13.5523 4.44772 14 5 14H7C7.55228 14 8 13.5523 8 13V11C8 10.4477 7.55228 10 7 10H5ZM10 11C10 10.4477 10.4477 10 11 10H13C13.5523 10 14 10.4477 14 11V13C14 13.5523 13.5523 14 13 14H11C10.4477 14 10 13.5523 10 13V11ZM17 4C16.4477 4 16 4.44772 16 5V7C16 7.55228 16.4477 8 17 8H19C19.5523 8 20 7.55228 20 7V5C20 4.44772 19.5523 4 19 4H17ZM16 11C16 10.4477 16.4477 10 17 10H19C19.5523 10 20 10.4477 20 11V13C20 13.5523 19.5523 14 19 14H17C16.4477 14 16 13.5523 16 13V11ZM5 16C4.44772 16 4 16.4477 4 17V19C4 19.5523 4.44772 20 5 20H7C7.55228 20 8 19.5523 8 19V17C8 16.4477 7.55228 16 7 16H5ZM10 17C10 16.4477 10.4477 16 11 16H13C13.5523 16 14 16.4477 14 17V19C14 19.5523 13.5523 20 13 20H11C10.4477 20 10 19.5523 10 19V17ZM17 16C16.4477 16 16 16.4477 16 17V19C16 19.5523 16.4477 20 17 20H19C19.5523 20 20 19.5523 20 19V17C20 16.4477 19.5523 16 19 16H17Z"
+                                            fill="#51459E"
+                                        />
+                                    </svg>
+                                </div>
+                                <span>All Files</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="nav-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                        <path
+                                            opacity="0.3"
+                                            d="M10.9 2C11.4523 2 11.9 2.44772 11.9 3C11.9 3.55228 11.4523 4 10.9 4H6C4.89543 4 4 4.89543 4 6V18C4 19.1046 4.89543 20 6 20H18C19.1046 20 20 19.1046 20 18V16C20 15.4477 20.4477 15 21 15C21.5523 15 22 15.4477 22 16V18C22 20.2091 20.2091 22 18 22H6C3.79086 22 2 20.2091 2 18V6C2 3.79086 3.79086 2 6 2H10.9Z"
+                                            fill="#51459E"
+                                        />
+                                        <path
+                                            d="M7.00455 13.8973C7.00455 13.1346 6.84111 10.1246 9.21552 7.73659C10.8136 6.12944 13.2053 5.85068 16.0654 5.72356V1.83791C16.0654 1.18717 16.8374 0.845197 17.3194 1.28244L23.8275 7.18682C24.1534 7.4824 24.156 7.99364 23.8332 8.29256L17.325 14.3198C16.8449 14.7645 16.0654 14.4239 16.0654 13.7695V9.90761C14.2494 9.95755 12.9559 10.0731 11.7806 10.447C9.50904 11.1696 8.16113 14.2685 7.79763 15.2124C7.73495 15.3752 7.57969 15.4863 7.40526 15.4863C7.18144 15.4863 7.00007 15.305 7.00078 15.0812C7.00208 14.6691 7.00455 14.1955 7.00455 13.8973Z"
+                                            fill="#51459E"
+                                        />
+                                    </svg>
+                                </div>
+                                <span>Shared</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="nav-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            d="M16.5 4.5C14.8905 4.5 13.0083 6.32463 12 7.5C10.9917 6.32463 9.1095 4.5 7.5 4.5C4.651 4.5 3 6.72218 3 9.55041C3 14.25 12 19.5 12 19.5C12 19.5 21 14.25 21 9.75C21 6.92177 19.349 4.5 16.5 4.5Z"
+                                            fill="#51459E"
+                                        />
+                                    </svg>
+                                </div>
+                                <span>Favorites</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="nav-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M20 10.793C19.5232 10.9278 19.02 11 18.5 11C15.4624 11 13 8.53757 13 5.5C13 4.97999 13.0722 4.47683 13.207 4H7C5.34315 4 4 5.34315 4 7V17C4 18.6569 5.34315 20 7 20H17C18.6569 20 20 18.6569 20 17V10.793Z"
+                                            fill="#51459E"
+                                        />
+                                        <path
+                                            opacity="0.3"
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M18.5 8C19.8807 8 21 6.88071 21 5.5C21 4.11929 19.8807 3 18.5 3C17.1193 3 16 4.11929 16 5.5C16 6.88071 17.1193 8 18.5 8Z"
+                                            fill="#51459E"
+                                        />
+                                    </svg>
+                                </div>
+                                <span>Recent</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="nav-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M20 9H15V4C15 4 15 3 14 3C13 3 13 4 13 4V11H20C20 11 21 10.8284 21 10C21 9.17157 20 9 20 9ZM5 14H10V19C10 19 10 20 11 20C12 20 12 19 12 19V12H5C5 12 4 12.1716 4 13C4 13.8284 5 14 5 14Z"
+                                            fill="#51459E"
+                                        />
+                                        <path
+                                            opacity="0.3"
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M16.8787 5.70711C16.4882 6.09763 16.4882 6.73079 16.8787 7.12132C17.2692 7.51184 17.9024 7.51184 18.2929 7.12132L21.1213 4.29289C21.5119 3.90237 21.5119 3.2692 21.1213 2.87868C20.7308 2.48815 20.0977 2.48815 19.7071 2.87868L16.8787 5.70711ZM3.87871 18.7071C3.48818 19.0976 3.48818 19.7308 3.87871 20.1213C4.26923 20.5118 4.9024 20.5118 5.29292 20.1213L8.12135 17.2929C8.51187 16.9024 8.51187 16.2692 8.12135 15.8787C7.73082 15.4882 7.09766 15.4882 6.70714 15.8787L3.87871 18.7071Z"
+                                            fill="#51459E"
+                                        />
+                                    </svg>
+                                </div>
+                                <span>Request</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="nav-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M5 7C3.89543 7 3 7.89543 3 9V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V9C21 7.89543 20.1046 7 19 7H5ZM8 13C8 15.2091 9.79086 17 12 17C14.2091 17 16 15.2091 16 13C16 10.7909 14.2091 9 12 9C9.79086 9 8 10.7909 8 13Z"
+                                            fill="#51459E"
+                                        />
+                                        <rect opacity="0.3" x="9" y="4" width="6" height="2" rx="1" fill="#51459E" />
+                                        <path
+                                            opacity="0.3"
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M12 15C13.1046 15 14 14.1046 14 13C14 11.8954 13.1046 11 12 11C10.8954 11 10 11.8954 10 13C10 14.1046 10.8954 15 12 15Z"
+                                            fill="#51459E"
+                                        />
+                                    </svg>
+                                </div>
+                                <span>Pictures</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="nav-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <rect x="2" y="6" width="13" height="12" rx="2" fill="#51459E" />
+                                        <path
+                                            opacity="0.3"
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M20.2929 7.7071C20.9228 7.07714 22 7.52331 22 8.41421V15.5858C22 16.4767 20.9228 16.9229 20.2929 16.2929L16.7071 12.7071C16.3166 12.3166 16.3166 11.6834 16.7071 11.2929L20.2929 7.7071Z"
+                                            fill="#51459E"
+                                        />
+                                    </svg>
+                                </div>
+                                <span>Videos</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="nav-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            opacity="0.3"
+                                            d="M5.85714 2H13.7364C14.0911 2 14.4343 2.12568 14.7051 2.35474L19.4687 6.38394C19.8057 6.66895 20 7.08788 20 7.5292V20.0833C20 21.8739 19.9796 22 18.1429 22H5.85714C4.02045 22 4 21.8739 4 20.0833V3.91667C4 2.12612 4.02045 2 5.85714 2Z"
+                                            fill="#51459E"
+                                        />
+                                        <rect x="6" y="11" width="9" height="2" rx="1" fill="#51459E" />
+                                        <rect x="6" y="15" width="5" height="2" rx="1" fill="#51459E" />
+                                    </svg>
+                                </div>
+                                <span>Documents</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="nav-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            opacity="0.3"
+                                            d="M5.85714 2H13.7364C14.0911 2 14.4343 2.12568 14.7051 2.35474L19.4687 6.38394C19.8057 6.66895 20 7.08788 20 7.5292V20.0833C20 21.8739 19.9796 22 18.1429 22H5.85714C4.02045 22 4 21.8739 4 20.0833V3.91667C4 2.12612 4.02045 2 5.85714 2Z"
+                                            fill="#51459E"
+                                        />
+                                        <rect x="7" y="17" width="9" height="1" rx="0.5" fill="#51459E" />
+                                        <path
+                                            d="M16.1692 8.70955C16.755 9.29534 16.755 10.2451 16.1692 10.8309L11.8574 15.1427C11.5872 15.413 11.2239 15.5699 10.8418 15.5813L9.87087 15.6105C9.01645 15.6362 8.31336 14.9437 8.32601 14.089L8.33945 13.1805C8.34522 12.7904 8.50276 12.4179 8.77863 12.142L13.1295 7.79114C13.7153 7.20535 14.665 7.20535 15.2508 7.79114L16.1692 8.70955Z"
+                                            fill="#51459E"
+                                        />
+                                    </svg>
+                                </div>
+                                <span>Signed</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- user space -->
+                <div class="use-space">
+                    <div class="used-gb">
+                        <h2>25.32 GB <span>used</span></h2>
+                        <h5>79% used - 6.64 GB free</h5>
+                    </div>
+                    <div class="user-line-bar progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="43" aria-valuemin="0" aria-valuemax="100" style="width: 140px;"></div>
+                    </div>
+                    <div class="add-more-space-btn">
+                        <a class="common-btn" href="#">Add More Space</a>
+                    </div>
+                </div>
+            </aside>
+            <!-- End Sidebar -->
+            <!-- ======= Main Content ======= -->
+            <main>
+                <div id="main-content-wapper" class="main-content-wapper">
+                    <!--start main body content -->
+                    <div class="main-body-content">
+                        <!--Start folder wise storage -->
+                        <div class="folder-wies-storage-grid">
+                            <!-- storage single item -->
+                            <div class="storage-single-item">
+                                <div class="storage-image">
+                                    <div class="folder-image">
+                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAITSURBVHgB7dyxTttQGMXx891ErUAd+gAdaF+gVqmh2cJadUaw0TeiT5CpoqUPUTYIZIhUdekAGVjaqUICJIR9sRmQLYzkcIhj2ecnebhXN8s/tpxYugZERERkPqxoMgy/BohcgCl5h8lotLmHFrkXcHX52wBmW3i88cL1xdre+PN/tIDLDsJ3O1tkvFRw2V382Q8GL9ECuYDWQR9PozURHWanFRFnGTDV+IizDphqdMQqAqYaG7GqgKlGRqwyYKpxEbuo3m3E5DfnF9TMY/5JzSNgKnDODVBDq8vfJxbFawfjzUmZ9VVfwvVnWPLdTukvVwEL+X7ZlQpIUkCSApLmdReuvTDczT1Qdg5XyXGyv79+mZuHFDKzV9nDe3sTRej1ersL2XUKOBVbjGO8zs4o4JSSgM+yYwUkKSBJAUkKSFJAkgKSFJCkgCQFJCkgSQFJCkhSQJICkhSQpIAkBSQpIEkBSQpIUkCSApIUkKSAJAUkKSBJAUkKSFJAkgKSFJCkgCQFJCkgKf/OBG9jSMJ+lV2ZCzgcbWzDW+12UVbsb5Jlu+ziwhfvfHi/049iLGXnXKf7Fs33L4Y/NrPzhxZ470+PjtbvrtTCjTYHBXtmV1Z+fEILWPE59SDdREgKSCodMLn2ryG3e+Zy45Kfg1l8DEm8OM2OSgc8PNz4472dtPdM9BfA89/D4ccziIiIiIiIzNUNZqV/ktOg4XkAAAAASUVORK5CYII=" alt="folder" />
+                                    </div>
+                                    <div class="folder-action">
+                                        <a href="#">
+                                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAqCAYAAACOaxq2AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACeSURBVHgB7ZKxDcIwEEX/nW+AjMAITscW1CnZADZhg5S0ZAQ6d2QEj5ABkhx3ICSQSKqUfsXJ+t/+1kmfYOzjdadCrSpHIq0UeuNRz6lvMrk5h/BwA18oMPA412IvL4Rf0yGgUgkt2/GABeyryAoali54CtvoVxI6JpmO/1JcY9ETp9Rklqk2ofsYtsHdNfdQeEE+Sh8yChtRGvVu1BP5OqQCH3YH0wAAAABJRU5ErkJggg==" alt="dot" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <h3>Design</h3>
+                                <div class="storage-file-content">
+                                    <h5>17 files</h5>
+                                    <h5>12 GB</h5>
+                                </div>
+                            </div>
+                            <!-- storage single item -->
+                            <div class="storage-single-item active">
+                                <div class="storage-image">
+                                    <div class="folder-image">
+                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIdSURBVHgB7dvLSutAHMfx/yQxtWd1OIcDR6mgW0EaV942de9D+Ej6BD6KbrS6sl4XLmzBeN+I4C3WjAmITLFC6s+mNfl9NmGG6ebbhFxgRIiIiKg3VLvJcX/ds8XypENaS2N/ZGZNcuRDwPLp5ko0uyhfpVVNBe58bWzyRnLAMgcTfnURihdT2tNusOrVt39LDrQEVEoq8h1yFNGSbslJxO4FjOUgYncDxjIesfsBYxmOmE7AWEYjphcwlsGIjqTtLWL0zLksfeYrb1LpB4xFES2lVqQPlc82G+pJR29SM40k69O9hH+GUV1I/ucyYHuVpAsZEMSAIAYE9eYu/AOM19dbPigXBovBdfOx7o/MPpjzDPiJgaJTMsehPMufAfu/nGxUzYi8hDsQfb7/9c8ZHDPnGLBDTy8PrjlmQBADghgQxIAgBgQxIIgBQQwIYkAQA4IYEMSAIAYEMSCIAUEMCGJAEAOCGBDEgCAGBDEgiAFBDAhiQBADghgQxIAgBgQxIIgBQQwIYkAQA4JaAypdExLRspd0aUvA3eHZJR1K3+2iTJVSl2LbS4mXt5v0zquV6DBqzoXaKkvm6StlWcfR8e6zFc/Npn9Ymnu/UtvuE6kNfdwzW77YWpDMi88n3dEveBMBMSAocUAdvjSFpGAXA3OcOKAK7WMhcd3AN8eJA+6Upo5Eq3pez0Tbce6j28vB1t/pWyEiIiIiIuqpV+LvnWfd47d+AAAAAElFTkSuQmCC" alt="folder" />
+                                    </div>
+                                    <div class="folder-action">
+                                        <a href="#">
+                                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAqCAYAAACOaxq2AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACeSURBVHgB7ZKxDcIwEEX/nW+AjMAITscW1CnZADZhg5S0ZAQ6d2QEj5ABkhx3ICSQSKqUfsXJ+t/+1kmfYOzjdadCrSpHIq0UeuNRz6lvMrk5h/BwA18oMPA412IvL4Rf0yGgUgkt2/GABeyryAoali54CtvoVxI6JpmO/1JcY9ETp9Rklqk2ofsYtsHdNfdQeEE+Sh8yChtRGvVu1BP5OqQCH3YH0wAAAABJRU5ErkJggg==" alt="dot" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <h3>Documents</h3>
+                                <div class="storage-file-content">
+                                    <h5>17 files</h5>
+                                    <h5>12 GB</h5>
+                                </div>
+                            </div>
+                            <!-- storage single item -->
+                            <div class="storage-single-item">
+                                <div class="storage-image">
+                                    <div class="folder-image">
+                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIZSURBVHgB7dtBa9NgHMfx3/9ZNp0M9AV4mL4Be9VTC05QvHovm3s/E48bbHffwdyYJ88D8eJh62EXPYlMJ12SvwnCSFgH6X5r2iW/D/SQh38L/TYhpPAAIiIiMh02anG4u94Jc0kHY/I0DOZXtj6hRS4FTPbXtuHWxzVlH3hoc3HPejs/0QKheBDvrvaZeDkHOp5EB37Qf4AWCOWj0MUNaFPEgAlpS8SJBcy1IeJEA+aaHnHiAXNNjlhLwFxTI9YWMNfEiBFqlkdEFjHeX32HGXOdJ6naA+byiOZhGzPGsseoZG9tMDxPeosvdwZV3lPrJXw72PKd+ajyj6uAI2RXSLfqrAKSFJCkgKSp3IVvA8/+VC4t3I2HiE6P7dmHs+KyzsCrBDwsvYbRY5zdf+qf3yyWx6Q6t3uIlx4VlxRwXH+jheKhApIUkKSAJAUkKSBJAUkKSFJAkgKSFJCkgCQFJCkgSQFJCkhSQJICkhSQpIAkBSQpIEkBSQpIUkCSApIUkKSAJAUkKSBJAUkKSFJAkgKSFJBUCpg6DiEw2Jeqs6WACytbGyl85nZR1smA7+bYGGP+svOPb7sW0uXyYPQETef+I8CPsm/7+8qZFCf2YvPiSh250WbUnlnfW3+NVrCxpnUTISkgqXrAOI0h//fMFVQPGIUjCHC6dFI8rBzQnm9+y6aPW3smmv9B4l/t1ftfEBERERERmap/KLCby7yKKfIAAAAASUVORK5CYII=" alt="folder" />
+                                    </div>
+                                    <div class="folder-action">
+                                        <a href="#">
+                                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAqCAYAAACOaxq2AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACeSURBVHgB7ZKxDcIwEEX/nW+AjMAITscW1CnZADZhg5S0ZAQ6d2QEj5ABkhx3ICSQSKqUfsXJ+t/+1kmfYOzjdadCrSpHIq0UeuNRz6lvMrk5h/BwA18oMPA412IvL4Rf0yGgUgkt2/GABeyryAoali54CtvoVxI6JpmO/1JcY9ETp9Rklqk2ofsYtsHdNfdQeEE+Sh8yChtRGvVu1BP5OqQCH3YH0wAAAABJRU5ErkJggg==" alt="dot" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <h3>Music</h3>
+                                <div class="storage-file-content">
+                                    <h5>1200 files</h5>
+                                    <h5>24 GB</h5>
+                                </div>
+                            </div>
+                            <!-- storage single item -->
+                            <div class="storage-single-item hidden">
+                                <div class="storage-image">
+                                    <div class="folder-image">
+                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIHSURBVHgB7dy/SiNRHMXxc2+yYXcb9wG2cPcFTGsXe1sb/5FXsBXEEcRWfQJFFAQfQh9BEBsLTWGjlQoqxOjPGQSZ0QgzHjOJM+cDCczlpsg3M9xM4AYQERGR/nDdBm1+so5KpY6szFpuefsAJfIuoC3ObITPTXzeIVx1zAWbVygBHz+whckmGS9Sh3X2LWj+QQkkAsL5Br5GaSJ69E4pIvYyYKTwEXsdMFLoiHkEjBQ2Yl4BI4WMmGfASOEiVpG/l4gLM+sYNJ+4k+pHwEgd3jYwgGxxqgX3GN5J7bbSzM/7Ev4G3DCsmvrDVcDuGmknKiBJAUkKSOrXKjzwbL6Z/EG59tDGdfvMre7dx4d1Bn6k9vQ38UDlP4Z+jtrcxK/4NAXMxP3GUO1ffEQBs2r/qMUPFZCkgCQFJCkgSQFJCkhSQJICkhSQpIAkBSQpIEkBSQpIUkCSApIUkKSAJAUkKSBJAUkKSFJAkgKSFJCkgCQFJCkgSQFJCkhSQJICkhSQpICkN/+ZYIcQwHCUdmoioFvaWQtfPHi7KPPkcAHv19JP78KC6QYe3XBi0GMERWe4DJOchu/19sM5bX/uVjZfr9SuG21c8H7PrAWz4yg6h8y0iJAUkJQhoO9AXvbMxWQI+HQKiRaa8/hh6oAu2DoJV+az0p6JFbtDx47Dr3o3EBERERER6atngGaIBd38qPAAAAAASUVORK5CYII=" alt="folder" />
+                                    </div>
+                                    <div class="folder-action">
+                                        <a href="#">
+                                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAqCAYAAACOaxq2AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACeSURBVHgB7ZKxDcIwEEX/nW+AjMAITscW1CnZADZhg5S0ZAQ6d2QEj5ABkhx3ICSQSKqUfsXJ+t/+1kmfYOzjdadCrSpHIq0UeuNRz6lvMrk5h/BwA18oMPA412IvL4Rf0yGgUgkt2/GABeyryAoali54CtvoVxI6JpmO/1JcY9ETp9Rklqk2ofsYtsHdNfdQeEE+Sh8yChtRGvVu1BP5OqQCH3YH0wAAAABJRU5ErkJggg==" alt="dot" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <h3>Images</h3>
+                                <div class="storage-file-content">
+                                    <h5>270 files</h5>
+                                    <h5>24 GB</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End folder wise storage -->
+
+                        <!--Start quick access -->
+                        <div class="quick-access">
+                            <h2>Quick Access</h2>
+                            <div class="quick-access-main-grid">
+                                <!-- quick access single item -->
+                                <div class="quick-access-single-item">
+                                    <div class="quick-access-image">
+                                        <a href="#">
+                                            <img src="/assets/q1-1eabfe2c.png" alt="quick" />
+                                        </a>
+                                    </div>
+                                    <div class="quick-access-inner">
+                                        <a href="#">
+                                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAO/SURBVHgB1ZlLTBNRFIb/OwXEgFpICER8FMpC0AAmGBUXNGjRhA1U4iMBBFawUReYuNAAGxPFRHDHClJ8bER0oVFQA6w0cVExETctJcEIiRGCsOHR6z1TaUpf0ylOH1/SzvTOudN/7px75tw5DAEw9Jv00CU1gaGCMVYKDgOiAYOTc24Dd710Nn4YCGzig2HwdA2D1C929YglXIjHRpevcJ33D4O16oEY0R6xm4pYw6BnTKrRW/KxOOwY32z2CDY8PtMhhvsm4gwGZtLXFugXh+1v3b9BI1vZxJiuH3EMh6vW2fD+hSw4z2qeFtINiG8W+fpans49ulIT4p9UMGleYlyqQYIg3MEkQWIHkTCwEkl8lyJREPMsCRFyPLsY14obUJRhxO6UdHyc/4Ih+wiGHKPQkogEk1D6eHMiu0T+5KZn4+HkI2iFpNIe5/PNfmK9uV7cKI++VqgWXGc8q2gT6oK2i2rB4Ywe+bVWqBa8tLqsaEOTUCtUC55acCjaUMTQCtWCeycHFW20DG2qBdPohRLdM2mV47FWRBSHSfDsyjzq8qvkSbi0toKp33a5XUt3IFjeoJkjgVDtErEm4lxiO+xKTsPtsjZU7S+XQ+Az4fPkTj+EmykRE5eYqLFiX3rOlrbZ5TlUv27Dn9WVkH2j7hK3ylr9xBLU1lfRqdg/qoIpx2g5ZAl6nLK9q8X1oU4RPcGFIr8IJylSyvaiIjg3LVvc7o6w7ck1qE8gwhZMJ3hi7obtwnM46kdw72R70JP68lT0C+S3waDI0WfqDHhMl2ExdobqTCGo9chF3C+/AeOeA9ihS5HbizKNaCm0iBccHJ/mJ4P2p0lWsfcY1JK1M1P+74mfnxG2YPKlgco7Il6e8gj1hSYKrUK+Ldj94ij5bNvhS4iUo1mFcrjzzhADxmG61d3l7bIYNdADYEoIJ8zioaC2fyAo/65+1eYZDL8nHYUVCj2RJOF1xir8b0gHXfiQw50B+gmmsBLPJFzyIwTzGe+GcNZs0WZ2ZU7ecgabBBds3gd7vyovgaIJLRQ2wyZz8RmdeCWfI8oE5zYNbL++y1sK9FqufpWgVQxpaR3vFHfdncFxsLuMKkYsKXkasS7CKMGYc7p+JE9yNo8titfxzYhzuIt30VaOEv9qB72IU5iLifLX6ADte6pIC8OON5mWAqp5mBBHMBd6HVdGPdWtLXW6hWH7mL7WOMMkRi+5Y+3T5KqXpxvf9Xg3smDWBqu5SdTIRP2DG4TV9pOC8JgRwdYmhI5hY32A5pevwV86ZSxV55F3jQAAAABJRU5ErkJggg==" alt="icon" />
+                                            <h5>Building Image.<span>jpeg</span></h5>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- quick access single item -->
+                                <div class="quick-access-single-item">
+                                    <div class="quick-access-image">
+                                        <a href="#">
+                                            <img src="/assets/q2-05777d54.png" alt="quick" />
+                                        </a>
+                                    </div>
+                                    <div class="quick-access-inner">
+                                        <a href="#">
+                                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAN3SURBVHgBzZm/T1NRFMe/5xUwRIfqICMl7gLRP+AlArYOCosmxKFODA5SBIITZUNEYXBxAhOZRQepMPiMi4MJoHFUu+JiGQi/0h7Pva+UFvqDvh9tP8nrvX3vtf2+23PvOfccggvYHA6iJWCCYAJGu7RdMBAEy6EgpKSfBLO0vCl9Cwdpi6z5FBxCcACHR01pJmFQV05cNWSwDM68ptXny6iSqgRz3+N+BIw56YbgDTL66SlKvFg86wfOJJjDwyGgaQFEJvxhA3w4QIn5ZKUbjUo3cGR0GEbzuo9iFV2g5nW+Kb9VgbIjLLY6KULjqCXMcUrMTpW6XFJwXcTmfry06KKC6yo2J6K46FOCtc2C5tAIZDhGH2fn808VCNargZpgTtZWfxCHc9idv3oUrhLU/LaBxCqComkh/0ROMIdHolDLS+NhaoeV5XiEKTCJRsX2rhotmCP6CUJoXELZ+CU7wkxRuOXyRfvwCyJtAcT9EiLuN/+DGwZ7gfu9dn/tG7C0Bvx195VFSGH3sMPAvsSzbjkSq+i9DryUpXywBx4jsXeLKSZhmPCaC63yEH3AwgTQcw2eQWkRzNwJv2i7BIzcA6aHvLFvopAhuwb/HcXVK8DiEyB2151wok61SoRQK5R9P5XRvuHYTIJGzV2xMpOh23BIsOKOwxd29uAUQ2/Fa4kSu7QKh6SaZJXYFmuujVksf7GdivMRTopg2bES2uEnP37bQr//gku2m2SpSMIvtsQ9v3oPfP0JT8hkNprk1RJTfgQ37OwC51vz3u/Zf786XEywU3DAMnAubbmeeG/Wjvsq+Hk459ZWi3NwYOk9HUfGPkljwg1tWQ+25XmUZsP8TnbR/dl4mKfgFiXUL7GKjLGomtyumSPjf+Q1hIaEkrQy06F6eZ4uHUOjkmcBhXkJL2zZezZo5Vn30ZvCWIIDD2ruqsuhM/iBgfxTBYIpMZ30ZAJ6hWjRmvI4Fa3RiuSyiOovWjRoLSdPl7qfb43H5Qnrk1xRYj/MxIteKve5uoguI1ZfRgV0+lUlMfzemegJxkXNoPC2M8DhCUnDplVm069k4WdZDaInJ1gxqit7hceidsrIK48ooW06HaumXuessKiSh2REZcTvoFrs6uhmtiRgoUocCT5Cl25bdapLDkNKVyx2Tu0nSrfb0kodLpOUMxZ23ZVu/wP8nTeNlgb7BgAAAABJRU5ErkJggg==" alt="icon" />
+                                            <h5>Product Video.<span>mp4</span></h5>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- quick access single item -->
+                                <div class="quick-access-single-item">
+                                    <div class="quick-access-image">
+                                        <a href="#">
+                                            <img src="/assets/q1-1eabfe2c.png" alt="quick" />
+                                        </a>
+                                    </div>
+                                    <div class="quick-access-inner">
+                                        <a href="#">
+                                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAuCAYAAACvWdDAAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAANsSURBVHgB7VlNUuJAFH6viZS7cU5gXFqlEriAsUqoWeIJ1BOAJxjmBOIJBk8wLFEW4m4WFiBaNUvjDZidNZB+8zoJ4ccEoybCwq8q0Hn9Ovnofn/dACwhcFZgmJ010LQSIhQBcQ1iAIKsty93TqLrTxPSMZ26QkAd4gZhrd3cOo6iKiZvEiPkPJyOcvn7n5FURw1j/84UAq48sSUEHd80tlvwTmTzd1dsCqYviDBj/kyJlDTGYvs8DkKBiDBj4+UjiMWoI+EFYgIWhTnEFkdKIYTYYkkpBBBbPCmFGWKJk+JwcB1NcUwscVLy37Cq4l4kZUWscFvRIGF0W9k+p6+sWEkVEckMVCKxTqMAi7ieOKkRMf6qedcz5PK9I2Zjju6Xw9BnsBSkJE3b3OdMRcUnqaj4JBUVTvA0Cp0i88uMxSJjOAEtIQzsFgdUK6xbMwq9UwFYnpEXBWIREgKlU5ZKPV6kfwaBE+H9o6B2TNoqGGH9Agm+wpIhOCEj1oDsR6ZscQ7Q3WSJu0F9BKgjCO5TevxJ0EKUUzUUkdid2ma9hZTAwfnNRbZl5DsGDKDOa1/J5e+qPO8liYMf3YussgmdVftOafLtj45y+Is3kYYi1L7MVCafp2okfqoJ7yE1Jqd1YAVUPbQhB8OKSGslvy+tPbgv7FXbjc0T1tlDT6aQLfRqbDuH8Aa8HKfUHnp1dc6eEMvGfsdUM8ZL1/WlhH0e++hccZJCoAMuZze6jU0LtHQp9CGY0t0B8u9I1m5ul9sX27q6lJ3BKzB3+Wxp94HL2Gz+1mRbCV0KkbItp0HiCxNzmir48i92nIPQcRaIhZQQ2ujAI1yJ5NlNg51CHSO5HuZ4ntt2bSo6nQik5oFPaPY0GFq/G64nqmMkiAmBpKQtijz9euAIKY64zxraBEMhDC76M8QpiWfDcwYvbxKuv3qK5pECFKUwDxAgvvsv430R4LPleXfeXM56SiKVI+9gYwNdK+cI69W6lzt1/q7n8rdVtWzuGHmWTskqJICnJzc1zdMZ2xRCf7KtvAoWBDFJBJYEPikOA37e4nLk0KsCEof6M4ED7akvIHqc8uZc4f5hVBd55CxIGDjxPgUptI2pOCUJDrg+VpF5LWhA4iA6Vsl/Kk51m1tdZpoloHO+/Sgb66sQodJWu7lTU4L/+yRDRuJLfc8AAAAASUVORK5CYII=" alt="icon" />
+                                            <h5>Customers.<span>pdf</span></h5>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End quick access -->
+
+                        <!-- start recent upload and file manager -->
+                        <div class="recent-upload-file-manager-main-grid">
+                            <!-- recent upload -->
+                            <div class="recent-upload-flex">
+                                <h2>Recently Uploaded</h2>
+                                <div class="recent-upload-list">
+                                    <ul>
+                                        <li class="recent-upload-parent">
+                                            <div class="upload-image-content">
+                                                <img src="/assets/r1-51376a8b.png" alt="recent" />
+                                                <div class="upload-content">
+                                                    <h4>Marcus Family.jpg</h4>
+                                                    <h5>10 oct, 10:23pm</h5>
+                                                </div>
+                                            </div>
+                                            <span>12 MB</span>
+                                        </li>
+                                        <li class="recent-upload-parent">
+                                            <div class="upload-image-content">
+                                                <img src="/assets/r2-1af4b634.png" alt="recent" />
+                                                <div class="upload-content">
+                                                    <h4>Marcus Family.jpg</h4>
+                                                    <h5>10 oct, 10:23pm</h5>
+                                                </div>
+                                            </div>
+                                            <span>12 MB</span>
+                                        </li>
+                                        <li class="recent-upload-parent">
+                                            <div class="upload-image-content">
+                                                <img src="/assets/r3-3b32c740.png" alt="recent" />
+                                                <div class="upload-content">
+                                                    <h4>Marcus Family.jpg</h4>
+                                                    <h5>10 oct, 10:23pm</h5>
+                                                </div>
+                                            </div>
+                                            <span>12 MB</span>
+                                        </li>
+                                        <li class="recent-upload-parent">
+                                            <div class="upload-image-content">
+                                                <img src="/assets/r4-2a690ff1.png" alt="recent" />
+                                                <div class="upload-content">
+                                                    <h4>Marcus Family.jpg</h4>
+                                                    <h5>10 oct, 10:23pm</h5>
+                                                </div>
+                                            </div>
+                                            <span>12 MB</span>
+                                        </li>
+                                        <li class="recent-upload-parent">
+                                            <div class="upload-image-content">
+                                                <img src="/assets/r5-06153cec.png" alt="recent" />
+                                                <div class="upload-content">
+                                                    <h4>Marcus Family.jpg</h4>
+                                                    <h5>10 oct, 10:23pm</h5>
+                                                </div>
+                                            </div>
+                                            <span>12 MB</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- file manager -->
+                            <div class="file-manager-flex">
+                                <div class="file-heading">
+                                    <h2>File Manager</h2>
+                                    <a href="#"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAABBCAYAAABlwHJGAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAALnSURBVHgB7ZzPaxNREIBnE5VCDCrV/vCUKOjNVuwfkB48CsabRdFTijdD8dzcG1FP2l6MKDlqJZ7sofGiJzF4s6CJUhtTLCmthaLUdGYzm+5udsMWXg/Jmw+G3by87O77Mjsbsrw1oAONRiOBi1sYtIxB91LBKGG8NgwjF/hTKGAUY7HRm5QxbgeRcLehB9P2cRtuCbh4APrwEE+VNK20RKCEGC4+YRwHvUiijHm7iBw0C6NurGPEw7TG2fAU9KQPoxbiF1dBbxKWiATozYgl4hjoTSwEgomIYEQEIyIYEcGICEZEMCKCERGMiGBEBCMiGBHBiAhGRDAighERjIhgDkTE5tZ/WPq2bUbQvtXav0B9P37eMpeqOQSKebOwDtnHVTzYHfP16cEjMDcTh+HBw21986/WYO75aqvvlcsnYOrOEEQjYUc/GnhmZhmKHzZabZM3ByB1YwBUoTQjlr5uw3R2uTUwYqX2F1L3yo42ooDC7j+pOtoLC3WYyvxo2y6JtUsgZlFgfn4NVKFUxOyLVc92kkGS7ORf/vbs20z9PTmbf3Ywy+qefSmbVKFUBB20Hyu/nDWgU/34YpPmzqSg+9svSkWcO9Pn+97wkLNGXLoQ8e17/uzedqheuGtGkP3tF6UiJq71ex40DXrMNfBJn0KXwiJo30b0aBjbTnnvL9kPqjDvhuNN4EVQdNuP6kEm+9M816OREFxPnvQVVHy/YRY9Ok3oqjJBfX0GV3hbN68y1JfE0hVjbCQCqlAuoluRX5aMiGBEBCMiGBHBiAhGRDAighERjIhgRAQjIhgRwYgIRkQwIoIREYyIYEQEY4n4DnpTskQUQW9K1r/YNLOvDPrN8LMYNzPCMAya6fYI9KSC4y/apztSNtC8zxjoRRxFVFpXDc6KJDTnQepCmiTQiuF+h+eA0p2vGPQu9GWn7U8OaPsdwYbGMZ5Bb/IO46L78QlGp09wdiQwRjm6lQo0nx+R4xLQxi7WyrRAQAU9AwAAAABJRU5ErkJggg==" alt="more" /></a>
+                                </div>
+                                <div class="file-manager-inner-grid">
+                                    <!-- single item -->
+                                    <div class="file-manager-single-item">
+                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAdCAYAAAAgqdWEAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGGSURBVHgBxZc9VoNAFIXvG/DYxh2wg7ADKZIel5DSLtmJtnqM7iDptWAH4grEHZDSw89zZjIBwomaIuF9RWYCFN953HkzEBzx9CEE0wh9yjJbJ7cZBoDMz810+a6H8LeHuKCrdTLLcWZUPHmM/hKxXBQBBsA/5iGCv4onywyngDhDoRaHKn2UjCYgQoCTQGCPN3oy799REIDU4Vj0K5My6B7npq7yf2WYabF+myUQYr8yJVIzxJOnlS7mCEPB+ED1fdfKEDKT8Dh61mHlGENCiKAux22Aa21n8KoQMoSNDIMTOyESkWEg6yxtlW5HuoYAel/atDIuvLq5CVWGP9V2gtSF14gMt4r2bb6sDOmJveBVAaSoXWaa8CoVQQqldgF24WWMIQUh38oIh9dSmNdU+vLh1RgH1RxyBMNrVrMZ2z4jGF7T8KxCc0UwvKbhoStDZueUwvU5K+PCK0neyEDVwjKqE2CPZGWoUxm9NwWQwpwwX2e2MvbYyT7NUdYphifXH3Qvuz8/j8SEx1+HsWsAAAAASUVORK5CYII=" alt="filesicon" />
+                                        <h4>My Folder</h4>
+                                        <p>created Jun 23, 2020</p>
+                                    </div>
+                                    <!-- single item -->
+                                    <div class="file-manager-single-item">
+                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAuCAYAAACvWdDAAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAANsSURBVHgB7VlNUuJAFH6viZS7cU5gXFqlEriAsUqoWeIJ1BOAJxjmBOIJBk8wLFEW4m4WFiBaNUvjDZidNZB+8zoJ4ccEoybCwq8q0Hn9Ovnofn/dACwhcFZgmJ010LQSIhQBcQ1iAIKsty93TqLrTxPSMZ26QkAd4gZhrd3cOo6iKiZvEiPkPJyOcvn7n5FURw1j/84UAq48sSUEHd80tlvwTmTzd1dsCqYviDBj/kyJlDTGYvs8DkKBiDBj4+UjiMWoI+EFYgIWhTnEFkdKIYTYYkkpBBBbPCmFGWKJk+JwcB1NcUwscVLy37Cq4l4kZUWscFvRIGF0W9k+p6+sWEkVEckMVCKxTqMAi7ieOKkRMf6qedcz5PK9I2Zjju6Xw9BnsBSkJE3b3OdMRcUnqaj4JBUVTvA0Cp0i88uMxSJjOAEtIQzsFgdUK6xbMwq9UwFYnpEXBWIREgKlU5ZKPV6kfwaBE+H9o6B2TNoqGGH9Agm+wpIhOCEj1oDsR6ZscQ7Q3WSJu0F9BKgjCO5TevxJ0EKUUzUUkdid2ma9hZTAwfnNRbZl5DsGDKDOa1/J5e+qPO8liYMf3YussgmdVftOafLtj45y+Is3kYYi1L7MVCafp2okfqoJ7yE1Jqd1YAVUPbQhB8OKSGslvy+tPbgv7FXbjc0T1tlDT6aQLfRqbDuH8Aa8HKfUHnp1dc6eEMvGfsdUM8ZL1/WlhH0e++hccZJCoAMuZze6jU0LtHQp9CGY0t0B8u9I1m5ul9sX27q6lJ3BKzB3+Wxp94HL2Gz+1mRbCV0KkbItp0HiCxNzmir48i92nIPQcRaIhZQQ2ujAI1yJ5NlNg51CHSO5HuZ4ntt2bSo6nQik5oFPaPY0GFq/G64nqmMkiAmBpKQtijz9euAIKY64zxraBEMhDC76M8QpiWfDcwYvbxKuv3qK5pECFKUwDxAgvvsv430R4LPleXfeXM56SiKVI+9gYwNdK+cI69W6lzt1/q7n8rdVtWzuGHmWTskqJICnJzc1zdMZ2xRCf7KtvAoWBDFJBJYEPikOA37e4nLk0KsCEof6M4ED7akvIHqc8uZc4f5hVBd55CxIGDjxPgUptI2pOCUJDrg+VpF5LWhA4iA6Vsl/Kk51m1tdZpoloHO+/Sgb66sQodJWu7lTU4L/+yRDRuJLfc8AAAAASUVORK5CYII=" alt="filesicon" />
+                                        <h4>Aggreement.pdf</h4>
+                                        <p>created Jun 23, 2020</p>
+                                    </div>
+                                    <!-- single item -->
+                                    <div class="file-manager-single-item">
+                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAdCAYAAAAgqdWEAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGGSURBVHgBxZc9VoNAFIXvG/DYxh2wg7ADKZIel5DSLtmJtnqM7iDptWAH4grEHZDSw89zZjIBwomaIuF9RWYCFN953HkzEBzx9CEE0wh9yjJbJ7cZBoDMz810+a6H8LeHuKCrdTLLcWZUPHmM/hKxXBQBBsA/5iGCv4onywyngDhDoRaHKn2UjCYgQoCTQGCPN3oy799REIDU4Vj0K5My6B7npq7yf2WYabF+myUQYr8yJVIzxJOnlS7mCEPB+ED1fdfKEDKT8Dh61mHlGENCiKAux22Aa21n8KoQMoSNDIMTOyESkWEg6yxtlW5HuoYAel/atDIuvLq5CVWGP9V2gtSF14gMt4r2bb6sDOmJveBVAaSoXWaa8CoVQQqldgF24WWMIQUh38oIh9dSmNdU+vLh1RgH1RxyBMNrVrMZ2z4jGF7T8KxCc0UwvKbhoStDZueUwvU5K+PCK0neyEDVwjKqE2CPZGWoUxm9NwWQwpwwX2e2MvbYyT7NUdYphifXH3Qvuz8/j8SEx1+HsWsAAAAASUVORK5CYII=" alt="filesicon" />
+                                        <h4>Other Folder</h4>
+                                        <p>created Jun 23, 2020</p>
+                                    </div>
+                                    <!-- single item -->
+                                    <div class="file-manager-single-item">
+                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAuCAYAAACvWdDAAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAANsSURBVHgB7VlNUuJAFH6viZS7cU5gXFqlEriAsUqoWeIJ1BOAJxjmBOIJBk8wLFEW4m4WFiBaNUvjDZidNZB+8zoJ4ccEoybCwq8q0Hn9Ovnofn/dACwhcFZgmJ010LQSIhQBcQ1iAIKsty93TqLrTxPSMZ26QkAd4gZhrd3cOo6iKiZvEiPkPJyOcvn7n5FURw1j/84UAq48sSUEHd80tlvwTmTzd1dsCqYviDBj/kyJlDTGYvs8DkKBiDBj4+UjiMWoI+EFYgIWhTnEFkdKIYTYYkkpBBBbPCmFGWKJk+JwcB1NcUwscVLy37Cq4l4kZUWscFvRIGF0W9k+p6+sWEkVEckMVCKxTqMAi7ieOKkRMf6qedcz5PK9I2Zjju6Xw9BnsBSkJE3b3OdMRcUnqaj4JBUVTvA0Cp0i88uMxSJjOAEtIQzsFgdUK6xbMwq9UwFYnpEXBWIREgKlU5ZKPV6kfwaBE+H9o6B2TNoqGGH9Agm+wpIhOCEj1oDsR6ZscQ7Q3WSJu0F9BKgjCO5TevxJ0EKUUzUUkdid2ma9hZTAwfnNRbZl5DsGDKDOa1/J5e+qPO8liYMf3YussgmdVftOafLtj45y+Is3kYYi1L7MVCafp2okfqoJ7yE1Jqd1YAVUPbQhB8OKSGslvy+tPbgv7FXbjc0T1tlDT6aQLfRqbDuH8Aa8HKfUHnp1dc6eEMvGfsdUM8ZL1/WlhH0e++hccZJCoAMuZze6jU0LtHQp9CGY0t0B8u9I1m5ul9sX27q6lJ3BKzB3+Wxp94HL2Gz+1mRbCV0KkbItp0HiCxNzmir48i92nIPQcRaIhZQQ2ujAI1yJ5NlNg51CHSO5HuZ4ntt2bSo6nQik5oFPaPY0GFq/G64nqmMkiAmBpKQtijz9euAIKY64zxraBEMhDC76M8QpiWfDcwYvbxKuv3qK5pECFKUwDxAgvvsv430R4LPleXfeXM56SiKVI+9gYwNdK+cI69W6lzt1/q7n8rdVtWzuGHmWTskqJICnJzc1zdMZ2xRCf7KtvAoWBDFJBJYEPikOA37e4nLk0KsCEof6M4ED7akvIHqc8uZc4f5hVBd55CxIGDjxPgUptI2pOCUJDrg+VpF5LWhA4iA6Vsl/Kk51m1tdZpoloHO+/Sgb66sQodJWu7lTU4L/+yRDRuJLfc8AAAAASUVORK5CYII=" alt="filesicon" />
+                                        <h4>Blueprints</h4>
+                                        <p>created Jun 23, 2020</p>
+                                    </div>
+                                </div>
+                                <div class="open-file-manager-btn">
+                                    <a class="common-btn" href="#">Open File Manager</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End recent upload and file manager -->
+                    </div>
+                    <!--End main body content -->
+
+                    <!-- right side bar -->
+                    <div class="right-sidebar">
+                        <div class="right-sidebar-inner">
+                            <!-- chart bar -->
+                            <div class="chart-bar-heading">
+                                <h2>Usage Stats</h2>
+                                <div class="char-bar">
+                                    <img src="/assets/graph-8e61af24.png" alt="graph" />
+                                </div>
+                            </div>
+                            <!-- Shared folder -->
+                            <div class="shared-floder-main">
+                                <div class="recent-upload-flex">
+                                    <h2>Shared Folders</h2>
+                                    <div class="recent-upload-list">
+                                        <ul>
+                                            <li class="recent-upload-parent">
+                                                <div class="upload-image-content">
+                                                    <div class="shared-floder-img">
+                                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMLSURBVHgB7ZmxTxRBFMa/N3sHEYWINiTQgJGEEHpaQ6KJMRhChY2JJLZayz+BLUZLGws6beQPsDYRpBAFMXgxgWCQCLvz/ObgDNzu4e3t7S6J+ysgN7O79755b755dwcUFBQUFPzPSNTg1O2FYXtQGjQG5ah5VbsvZbux+PrhKnImJGD61sKo1dIgmqHkr+YtwtQP+EFpAM3il4ZdtpAjIQGNyqYhOYswaAc5imiPAEdOIkKbeOrmizs4Z1iLw44yNl69efChfq59GUgRty/9AENTE+EMZy5ARTuZdw8tYMphey8hI9SgW3wMMfhOhUIsdiDmM4weNPsMllLIIbPJgJEOBDpSXf1jKOgyQ7qGhGQiwNqgL2pcBd0U1YUEZLQHtHGpWmYnAZkIEJi9hpOq+0hAygJ0kvt1TkR+iMpvhN5cN8WEx+OQigsp7JiomeHajymwx+CvqmdX2Ib3c8VY8+JbxY6K2UJCWhNAHxervbTAQANvr2aFPNYvMuAZBn/3WMqSEXlG23Qi3G2fao8wgrYQX4DKBdbtiHX3WkZBQzcqm1bsFVUz50TwqgrjnWfI7xXpEk+A83Nfh2l9p+6z0H4a+zKD/86A34ngZZsW+J/EEsCC6cKJw+gkRmyvwjzKKvC/7xvr6rP8PCdiCaDlbTeas2p2RfGUGZhBhsTLgLKjga6HHiK6Ra/vYP1fUsU9Xvec100gA2KXhKF3cxNvq7VH/Y3KNv1816mjT85WBQCTtM3H/D8O2ijnKkiJlmranaoi3pejF3VzdCD+feuEiMuC6jgt9QnL7yMdbIjie2ivvjudLYJvbDN8JCClVkIrIjpPNbPuMDsO3rXTPdVZmoFV2ydWriMhafdCFYqYd+20Rthv0U4jKwF6RscZ4yNl5O3IAGPMVlQ7rbbaZv9CAjLKAM8PT1fY8P10L50Lqfss4Nl1JCRUm+5LpNjfjzaBy4AHb7lmu6aFtWNch6Gx0ID6azinHKj5Wj8W2TxO31gY9b3SQBqZaIVqVai3trh0P/cfVAoKCgpO8wd2cCiAEALQGwAAAABJRU5ErkJggg==" alt="recent" />
+                                                    </div>
+                                                    <div class="upload-content">
+                                                        <h4>Sketch Files</h4>
+                                                        <h5>Shared with: mike@getnextdesign.com</h5>
+                                                    </div>
+                                                </div>
+                                                <span>10 oct, 10:23pm</span>
+                                            </li>
+                                            <li class="recent-upload-parent">
+                                                <div class="upload-image-content">
+                                                    <div class="shared-floder-img">
+                                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMLSURBVHgB7ZmxTxRBFMa/N3sHEYWINiTQgJGEEHpaQ6KJMRhChY2JJLZayz+BLUZLGws6beQPsDYRpBAFMXgxgWCQCLvz/ObgDNzu4e3t7S6J+ysgN7O79755b755dwcUFBQUFPzPSNTg1O2FYXtQGjQG5ah5VbsvZbux+PrhKnImJGD61sKo1dIgmqHkr+YtwtQP+EFpAM3il4ZdtpAjIQGNyqYhOYswaAc5imiPAEdOIkKbeOrmizs4Z1iLw44yNl69efChfq59GUgRty/9AENTE+EMZy5ARTuZdw8tYMphey8hI9SgW3wMMfhOhUIsdiDmM4weNPsMllLIIbPJgJEOBDpSXf1jKOgyQ7qGhGQiwNqgL2pcBd0U1YUEZLQHtHGpWmYnAZkIEJi9hpOq+0hAygJ0kvt1TkR+iMpvhN5cN8WEx+OQigsp7JiomeHajymwx+CvqmdX2Ib3c8VY8+JbxY6K2UJCWhNAHxervbTAQANvr2aFPNYvMuAZBn/3WMqSEXlG23Qi3G2fao8wgrYQX4DKBdbtiHX3WkZBQzcqm1bsFVUz50TwqgrjnWfI7xXpEk+A83Nfh2l9p+6z0H4a+zKD/86A34ngZZsW+J/EEsCC6cKJw+gkRmyvwjzKKvC/7xvr6rP8PCdiCaDlbTeas2p2RfGUGZhBhsTLgLKjga6HHiK6Ra/vYP1fUsU9Xvec100gA2KXhKF3cxNvq7VH/Y3KNv1816mjT85WBQCTtM3H/D8O2ijnKkiJlmranaoi3pejF3VzdCD+feuEiMuC6jgt9QnL7yMdbIjie2ivvjudLYJvbDN8JCClVkIrIjpPNbPuMDsO3rXTPdVZmoFV2ydWriMhafdCFYqYd+20Rthv0U4jKwF6RscZ4yNl5O3IAGPMVlQ7rbbaZv9CAjLKAM8PT1fY8P10L50Lqfss4Nl1JCRUm+5LpNjfjzaBy4AHb7lmu6aFtWNch6Gx0ID6azinHKj5Wj8W2TxO31gY9b3SQBqZaIVqVai3trh0P/cfVAoKCgpO8wd2cCiAEALQGwAAAABJRU5ErkJggg==" alt="recent" />
+                                                    </div>
+                                                    <div class="upload-content">
+                                                        <h4>AutoCad Drawings</h4>
+                                                        <h5>Shared with: shakir@gmail.com</h5>
+                                                    </div>
+                                                </div>
+                                                <span>10 oct, 10:23pm</span>
+                                            </li>
+                                            <li class="recent-upload-parent">
+                                                <div class="upload-image-content">
+                                                    <div class="shared-floder-img">
+                                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMLSURBVHgB7ZmxTxRBFMa/N3sHEYWINiTQgJGEEHpaQ6KJMRhChY2JJLZayz+BLUZLGws6beQPsDYRpBAFMXgxgWCQCLvz/ObgDNzu4e3t7S6J+ysgN7O79755b755dwcUFBQUFPzPSNTg1O2FYXtQGjQG5ah5VbsvZbux+PrhKnImJGD61sKo1dIgmqHkr+YtwtQP+EFpAM3il4ZdtpAjIQGNyqYhOYswaAc5imiPAEdOIkKbeOrmizs4Z1iLw44yNl69efChfq59GUgRty/9AENTE+EMZy5ARTuZdw8tYMphey8hI9SgW3wMMfhOhUIsdiDmM4weNPsMllLIIbPJgJEOBDpSXf1jKOgyQ7qGhGQiwNqgL2pcBd0U1YUEZLQHtHGpWmYnAZkIEJi9hpOq+0hAygJ0kvt1TkR+iMpvhN5cN8WEx+OQigsp7JiomeHajymwx+CvqmdX2Ib3c8VY8+JbxY6K2UJCWhNAHxervbTAQANvr2aFPNYvMuAZBn/3WMqSEXlG23Qi3G2fao8wgrYQX4DKBdbtiHX3WkZBQzcqm1bsFVUz50TwqgrjnWfI7xXpEk+A83Nfh2l9p+6z0H4a+zKD/86A34ngZZsW+J/EEsCC6cKJw+gkRmyvwjzKKvC/7xvr6rP8PCdiCaDlbTeas2p2RfGUGZhBhsTLgLKjga6HHiK6Ra/vYP1fUsU9Xvec100gA2KXhKF3cxNvq7VH/Y3KNv1816mjT85WBQCTtM3H/D8O2ijnKkiJlmranaoi3pejF3VzdCD+feuEiMuC6jgt9QnL7yMdbIjie2ivvjudLYJvbDN8JCClVkIrIjpPNbPuMDsO3rXTPdVZmoFV2ydWriMhafdCFYqYd+20Rthv0U4jKwF6RscZ4yNl5O3IAGPMVlQ7rbbaZv9CAjLKAM8PT1fY8P10L50Lqfss4Nl1JCRUm+5LpNjfjzaBy4AHb7lmu6aFtWNch6Gx0ID6azinHKj5Wj8W2TxO31gY9b3SQBqZaIVqVai3trh0P/cfVAoKCgpO8wd2cCiAEALQGwAAAABJRU5ErkJggg==" alt="recent" />
+                                                    </div>
+                                                    <div class="upload-content">
+                                                        <h4>Master Speardsheets</h4>
+                                                        <h5>Shared with: john@google.com</h5>
+                                                    </div>
+                                                </div>
+                                                <span>10 oct, 10:23pm</span>
+                                            </li>
+                                            <li class="recent-upload-parent">
+                                                <div class="upload-image-content">
+                                                    <div class="shared-floder-img">
+                                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMLSURBVHgB7ZmxTxRBFMa/N3sHEYWINiTQgJGEEHpaQ6KJMRhChY2JJLZayz+BLUZLGws6beQPsDYRpBAFMXgxgWCQCLvz/ObgDNzu4e3t7S6J+ysgN7O79755b755dwcUFBQUFPzPSNTg1O2FYXtQGjQG5ah5VbsvZbux+PrhKnImJGD61sKo1dIgmqHkr+YtwtQP+EFpAM3il4ZdtpAjIQGNyqYhOYswaAc5imiPAEdOIkKbeOrmizs4Z1iLw44yNl69efChfq59GUgRty/9AENTE+EMZy5ARTuZdw8tYMphey8hI9SgW3wMMfhOhUIsdiDmM4weNPsMllLIIbPJgJEOBDpSXf1jKOgyQ7qGhGQiwNqgL2pcBd0U1YUEZLQHtHGpWmYnAZkIEJi9hpOq+0hAygJ0kvt1TkR+iMpvhN5cN8WEx+OQigsp7JiomeHajymwx+CvqmdX2Ib3c8VY8+JbxY6K2UJCWhNAHxervbTAQANvr2aFPNYvMuAZBn/3WMqSEXlG23Qi3G2fao8wgrYQX4DKBdbtiHX3WkZBQzcqm1bsFVUz50TwqgrjnWfI7xXpEk+A83Nfh2l9p+6z0H4a+zKD/86A34ngZZsW+J/EEsCC6cKJw+gkRmyvwjzKKvC/7xvr6rP8PCdiCaDlbTeas2p2RfGUGZhBhsTLgLKjga6HHiK6Ra/vYP1fUsU9Xvec100gA2KXhKF3cxNvq7VH/Y3KNv1816mjT85WBQCTtM3H/D8O2ijnKkiJlmranaoi3pejF3VzdCD+feuEiMuC6jgt9QnL7yMdbIjie2ivvjudLYJvbDN8JCClVkIrIjpPNbPuMDsO3rXTPdVZmoFV2ydWriMhafdCFYqYd+20Rthv0U4jKwF6RscZ4yNl5O3IAGPMVlQ7rbbaZv9CAjLKAM8PT1fY8P10L50Lqfss4Nl1JCRUm+5LpNjfjzaBy4AHb7lmu6aFtWNch6Gx0ID6azinHKj5Wj8W2TxO31gY9b3SQBqZaIVqVai3trh0P/cfVAoKCgpO8wd2cCiAEALQGwAAAABJRU5ErkJggg==" alt="recent" />
+                                                    </div>
+                                                    <div class="upload-content">
+                                                        <h4>Design Comps</h4>
+                                                        <h5>Shared with: kelvin@hunter.com</h5>
+                                                    </div>
+                                                </div>
+                                                <span>10 oct, 10:23pm</span>
+                                            </li>
+                                            <li class="recent-upload-parent">
+                                                <div class="upload-image-content">
+                                                    <div class="shared-floder-img">
+                                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMLSURBVHgB7ZmxTxRBFMa/N3sHEYWINiTQgJGEEHpaQ6KJMRhChY2JJLZayz+BLUZLGws6beQPsDYRpBAFMXgxgWCQCLvz/ObgDNzu4e3t7S6J+ysgN7O79755b755dwcUFBQUFPzPSNTg1O2FYXtQGjQG5ah5VbsvZbux+PrhKnImJGD61sKo1dIgmqHkr+YtwtQP+EFpAM3il4ZdtpAjIQGNyqYhOYswaAc5imiPAEdOIkKbeOrmizs4Z1iLw44yNl69efChfq59GUgRty/9AENTE+EMZy5ARTuZdw8tYMphey8hI9SgW3wMMfhOhUIsdiDmM4weNPsMllLIIbPJgJEOBDpSXf1jKOgyQ7qGhGQiwNqgL2pcBd0U1YUEZLQHtHGpWmYnAZkIEJi9hpOq+0hAygJ0kvt1TkR+iMpvhN5cN8WEx+OQigsp7JiomeHajymwx+CvqmdX2Ib3c8VY8+JbxY6K2UJCWhNAHxervbTAQANvr2aFPNYvMuAZBn/3WMqSEXlG23Qi3G2fao8wgrYQX4DKBdbtiHX3WkZBQzcqm1bsFVUz50TwqgrjnWfI7xXpEk+A83Nfh2l9p+6z0H4a+zKD/86A34ngZZsW+J/EEsCC6cKJw+gkRmyvwjzKKvC/7xvr6rP8PCdiCaDlbTeas2p2RfGUGZhBhsTLgLKjga6HHiK6Ra/vYP1fUsU9Xvec100gA2KXhKF3cxNvq7VH/Y3KNv1816mjT85WBQCTtM3H/D8O2ijnKkiJlmranaoi3pejF3VzdCD+feuEiMuC6jgt9QnL7yMdbIjie2ivvjudLYJvbDN8JCClVkIrIjpPNbPuMDsO3rXTPdVZmoFV2ydWriMhafdCFYqYd+20Rthv0U4jKwF6RscZ4yNl5O3IAGPMVlQ7rbbaZv9CAjLKAM8PT1fY8P10L50Lqfss4Nl1JCRUm+5LpNjfjzaBy4AHb7lmu6aFtWNch6Gx0ID6azinHKj5Wj8W2TxO31gY9b3SQBqZaIVqVai3trh0P/cfVAoKCgpO8wd2cCiAEALQGwAAAABJRU5ErkJggg==" alt="recent" />
+                                                    </div>
+                                                    <div class="upload-content">
+                                                        <h4>Final Revisions</h4>
+                                                        <h5>Shared with: saim@purepixel.com</h5>
+                                                    </div>
+                                                </div>
+                                                <span>10 oct, 10:23pm</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- friend and get -->
+                            <div class="friend-get-main">
+                                <div class="friend-get-inner-contet">
+                                    <h3>Invite 2 friends and get 5 GB extra space.</h3>
+                                    <a class="common-btn" href="#">Invite Now!</a>
+                                </div>
+                                <div class="friend-get-overly"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- right side bar -->
+                </div>
+            </main>
+            <!-- End Main Content -->
+        </div>
+        
+    </body>
+</html>

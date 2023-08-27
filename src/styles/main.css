@@ -507,6 +507,11 @@ ul.child-dropdown li a {
   transition: 0.5s;
 }
 
+.nav-menu li:hover a svg rect {
+  fill: #eceff7;
+  transition: 0.5s;
+}
+
 .nav-menu li a .nav-icon {
   position: relative;
   top: 7px;
@@ -612,7 +617,7 @@ main {
   width: 100%;
   margin-left: 34px;
   margin-top: 31px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .folder-wies-storage-grid {
@@ -1167,7 +1172,6 @@ main {
     width: 96%;
     display: block;
     margin: 0 auto;
-    overflow: hidden;
   }
   .main-body-content {
     flex: 0 0 100%;
